@@ -1,4 +1,4 @@
-import styles from "../styles/Home.module.css";
+import styles from "../../../styles/Home.module.css";
 
 export const Footer = () =>
 {
@@ -9,7 +9,7 @@ export const Footer = () =>
 				target="_blank"
 				rel="noopener noreferrer"
 			>
-          Powered by NRG_VAL</a> & <a
+          Powered by NRG_VAL</a> &nbsp; &  &nbsp;<a
 				href="https://www.slavo3.com"
 				target="_blank"
 				rel="noopener noreferrer"

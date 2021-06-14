@@ -1,5 +1,3 @@
-import { Footer } from "./Layout/Footer";
-import { HeadComponent } from "./Layout/HeadComponent";
+import { Footer, HeadComponent, BodyLayout } from "./Layout";
 
-
-export { Footer, HeadComponent};
+export { Footer, HeadComponent, BodyLayout};

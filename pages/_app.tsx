@@ -1,15 +1,14 @@
 import "../styles/globals.css";
 import type { AppProps /*, AppContext */ } from "next/app";
-import { Fragment } from "react";
-import { Footer, HeadComponent } from "../componetns ";
+import { Footer, HeadComponent, BodyLayout } from "../componetns ";
 
 function MyApp({ Component, pageProps }: AppProps) {
 	return (
-		<Fragment>
+		<BodyLayout>
 			<HeadComponent />
 			<Component { ...pageProps } />
 			<Footer />
-		</Fragment>
+		</BodyLayout>
 	);
 }
 
