@@ -10,26 +10,39 @@ const textDescription = "Spending a healthy day in these times is according to m
 const urlImage = "http://placekitten.com/200/100";
 const extraDitails = "Following a healthy, active lifestyle doesn’t have to be complicated! Even the smallest adjustment to your routine can lead to big changes."; 
 
+const client = createClient({
+	space: process.env.SPACE_ID,
+	accessToken: process.env.ACCESS_TOKEN
+} );
 
-export default function Home ()
+export default function Home (props)
 {
-	useEffect( () =>
-	{
-		const client = createClient({
-			space: "gf8ouizfq0ug",
-			accessToken: "-fGazrYRJF31PR9R61gUJ26JwfohUqf6xtxZ6uYda9s"
-		} );
-		
-		client
-			.getEntry("nrgday")
-			.then((entry: any) => console.log(entry))
-			.catch((err: any)=> console.log(err));
-	}, []);
+	const { blogArticles } = props;
 	
 
+
+	console.log("Blog Articles: ", blogArticles);
 	return (
 		<Container>
 			<ItemTemplate titleHeader={titleHeader} description={textDescription} urlImage={urlImage} extraDitails={extraDitails }  />
 		</Container>
 	);
+}
+
+
+export async function getStaticProps() {
+	const data = client
+		.getEntries({
+			content_type: "blog"
+		})
+		.then((entry: any) => console.log("ENTRY: ", entry))
+		.catch((err: any)=> console.log("ERROR MESSAGE: ", err));
+
+	
+	return {
+		props: {
+			blogArticles: data.items
+		}
+	};
+	
 }
