@@ -2,7 +2,7 @@ import "semantic-ui-css/semantic.min.css";
 import { Container } from "semantic-ui-react";
 import { ItemTemplate } from "../componetns ";
 import { createClient } from "contentful";
-import { useEffect } from "react";
+
 
 
 const titleHeader = "NRG DAY";
@@ -11,11 +11,11 @@ const urlImage = "http://placekitten.com/200/100";
 const extraDitails = "Following a healthy, active lifestyle doesn’t have to be complicated! Even the smallest adjustment to your routine can lead to big changes."; 
 
 const client = createClient({
-	space: process.env.SPACE_ID,
-	accessToken: process.env.ACCESS_TOKEN
+	space: process.env.NEXT_SPACE_ID,
+	accessToken: process.env.NESXT_ACCESS_TOKEN
 } );
 
-export default function Home (props)
+export default function Home (props: any)
 {
 	const { blogArticles } = props;
 	
