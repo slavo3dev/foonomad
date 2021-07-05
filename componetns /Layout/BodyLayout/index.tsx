@@ -6,12 +6,12 @@ interface Props
 }
 
 
-export const BodyLayout: React.FC<Props> = ( { children }) =>
+export const BodyLayout: React.FC<Props> = (props) =>
 {
 	return (
 		<div className={styles.container}>
 			<main className={ styles.main }>
-				{children}
+				{props.children}
 			</main>
 		</div>
 	);
