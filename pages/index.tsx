@@ -9,18 +9,42 @@ const urlImage = "http://placekitten.com/200/100";
 const extraDitails = "Following a healthy, active lifestyle doesn’t have to be complicated! Even the smallest adjustment to your routine can lead to big changes.";
 
 
+export async function getStaticProps ()
+{
+	let data;
 
-console.log( {
-	space: process.env.NEXT_PUBLIC_SPACE_ID,
-	accessToken: process.env.NEXT_PUBLIC_ACCESS_TOKEN
-} );
+	const client = createClient({
+		space: process.env.NEXT_PUBLIC_SPACE_ID,
+		accessToken: process.env.NEXT_PUBLIC_ACCESS_TOKEN 
+	} );
+
+	try
+	{
+		data = await client
+			.getEntries({
+				content_type: "blog"
+			});
+	} catch ( err )
+	{
+		console.log("Error Message: ", err);
+		data = { errorMsg: "Something Went Wrong, Please try again later!!!"};
+	}
+	
+
+	return {
+		props: {
+			blogArticles: data
+		}
+	};
+	
+}
 
 export default function Home (props: any)
 {
 	const { blogArticles } = props;
 
 	
-	console.log("Blog Articles: ", props, blogArticles);
+	console.log("Blog Articles: ", blogArticles.items[0]);
 
 	console.log( "READ: ", {
 		space: process.env.NEXT_PUBLIC_SPACE_ID,
@@ -33,28 +57,4 @@ export default function Home (props: any)
 	);
 }
 
-
-export async function getStaticProps ()
-{
-
-	const client = createClient({
-		space: process.env.NEXT_PUBLIC_SPACE_ID,
-		accessToken: process.env.NEXT_PUBLIC_ACCESS_TOKEN 
-	} );
-	
-	const data = await client
-		.getEntries({
-			content_type: "blog"
-		})
-		.then((entry: any) =>  entry)
-		.catch((err: any)=> console.log("ERROR MESSAGE: ", err));
-
-	
-	return {
-		props: {
-			blogArticles: JSON.stringify(data)
-		}
-	};
-	
-}
 
