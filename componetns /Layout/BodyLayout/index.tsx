@@ -5,7 +5,7 @@ interface Props
 	children: any
 }
 
-
+// Body Function
 export const BodyLayout: React.FC<Props> = (props) =>
 {
 	return (
