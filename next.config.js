@@ -1,8 +1,10 @@
 /* eslint-disable no-undef */
-module.exports = {
- 
-	env: {
-		CONTENTFUL_SPACE_ID: process.env.NEXT_PUBLIC_SPACE_ID,
-		CONTENTFUL_ACCESS_TOKEN: process.env.NEXT_PUBLIC_ACCESS_TOKEN,
-	},
-};
+/* eslint-disable @typescript-eslint/no-var-requires */
+const nextEnv = require("next-env");
+const dotenvLoad = require("dotenv-load");
+
+dotenvLoad();
+
+const withNextEnv = nextEnv();
+// eslint-disable-next-line no-undef
+module.exports = withNextEnv();
