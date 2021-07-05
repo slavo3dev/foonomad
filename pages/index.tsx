@@ -46,10 +46,7 @@ export default function Home (props: any)
 	
 	console.log("Blog Articles: ", blogArticles.items[0]);
 
-	console.log( "READ: ", {
-		space: process.env.NEXT_PUBLIC_SPACE_ID,
-		accessToken: process.env.NEXT_PUBLIC_ACCESS_TOKEN
-	});
+	
 	return (
 		<Container>
 			<ItemTemplate titleHeader={titleHeader} description={textDescription} urlImage={urlImage} extraDitails={extraDitails }  />
