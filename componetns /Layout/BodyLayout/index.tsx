@@ -1,7 +1,7 @@
 import styles from "../../../styles/Home.module.css";
 
 
-export const BodyLayout = ( { children }) =>
+export const BodyLayout = ( { children }: any) =>
 {
 	return (
 		<div className={styles.container}>
