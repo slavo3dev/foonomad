@@ -1,12 +1,12 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import styles from "../../../styles/Home.module.css";
-
-interface Props {
+import React from "react";
+interface Props
+{
 	children: any
 }
 
 
-export const BodyLayout = ( { children }: Props) =>
+export const BodyLayout: React.FC<Props> = ( { children }) =>
 {
 	return (
 		<div className={styles.container}>
