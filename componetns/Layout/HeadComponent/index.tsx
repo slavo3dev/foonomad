@@ -4,7 +4,7 @@ export const HeadComponent= () =>
 {
 	return (
 		<Head>
-			<title>NRG DAY</title>
+			<title>Software Web Development | ChatBot | SEO </title>
 			<link rel="icon" href="/favicon.ico" />
 		</Head>
 	);
