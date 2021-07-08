@@ -1,12 +1,12 @@
 import styles from "../../../styles/Home.module.css";
-import React from "react";
+
 interface Props
 {
 	children: any
 }
 
 // Body Function
-export const BodyLayout: React.FC<Props> = (props) =>
+export const BodyLayout= (props: Props) =>
 {
 	return (
 		<div className={styles.container}>

@@ -5,8 +5,7 @@ interface Props  {
 	titleHeader: string,
 	description: string,
 	urlImage: string,
-	extraDitails: string,
-	extraInfo: string,
+	extraInfo: any,
 	category: string;
 }
 
