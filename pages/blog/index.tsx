@@ -14,6 +14,7 @@ const extra = (
 );
 const arrayOfBlogs = [
 	{
+		key: 1,
 		titleHeader: "NRG DAY",
 		category: "Wellness & Healthy",
 		textDescription: "Spending a healthy day in these times is according to many people impossible, but we are here to change that. It doesn’t matter how you lived your life before, the important thing is how you will start a new day.",
@@ -21,6 +22,7 @@ const arrayOfBlogs = [
 		extraDitails: extra
 	},
 	{
+		key: 2,
 		titleHeader: "NRG LION",
 		category: "Wellness & Healthy",
 		textDescription : "Spending a healthy day in these times is according to many people impossible, but we are here to change that. It doesn’t matter how you lived your life before, the important thing is how you will start a new day.",
@@ -28,6 +30,7 @@ const arrayOfBlogs = [
 		extraDitails : extra
 	},
 	{
+		key: 3,
 		titleHeader: "NRG NOMAD",
 		category: "Wellness & Healthy",
 		textDescription: "Spending a healthy day in these times is according to many people impossible, but we are here to change that. It doesn’t matter how you lived your life before, the important thing is how you will start a new day.",
@@ -35,6 +38,7 @@ const arrayOfBlogs = [
 		extraDitails: extra
 	},
 	{
+		key: 4,
 		titleHeader: "NRG VAL",
 		category: "Wellness & Healthy",
 		textDescription: "Spending a healthy day in these times is according to many people impossible, but we are here to change that. It doesn’t matter how you lived your life before, the important thing is how you will start a new day.",
@@ -42,6 +46,7 @@ const arrayOfBlogs = [
 		extraDitails: extra
 	}, 
 	{
+		key: 5,
 		titleHeader: "PrototypeNext",
 		category: "Wellness & Healthy",
 		textDescription: "Spending a healthy day in these times is according to many people impossible, but we are here to change that. It doesn’t matter how you lived your life before, the important thing is how you will start a new day.",
@@ -49,6 +54,7 @@ const arrayOfBlogs = [
 		extraDitails: extra
 	}, 
 	{
+		key: 7,
 		titleHeader: "ReactLion",
 		category: "Wellness & Healthy",
 		textDescription: "Spending a healthy day in these times is according to many people impossible, but we are here to change that. It doesn’t matter how you lived your life before, the important thing is how you will start a new day.",
@@ -56,6 +62,7 @@ const arrayOfBlogs = [
 		extraDitails: extra
 	}, 
 	{
+		key: 8,
 		titleHeader: "Slavo3",
 		category: "Wellness & Healthy",
 		textDescription: "Spending a healthy day in these times is according to many people impossible, but we are here to change that. It doesn’t matter how you lived your life before, the important thing is how you will start a new day.",
@@ -92,7 +99,7 @@ export default function Blog (props: any)
 						arrayOfBlogs.map( ( post ) => (
 							<Grid.Column width={ 4 }>
 								<ArticaleCard 
-									key={ post.titleHeader }
+									key={post.key}
 									titleHeader={ post.titleHeader }
 									description={ post.textDescription }
 									urlImage={ post.urlImage }
