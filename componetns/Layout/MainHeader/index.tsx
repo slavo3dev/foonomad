@@ -33,6 +33,11 @@ export const MainHeader = () =>
 						<a>Contact</a>
 					</Link>
 				</Menu.Item>
+				<Menu.Item  active={activeItem === "login"} onClick={() => setActiveItem("login")}> 
+					<Link href="/login">
+						<a>Login</a>
+					</Link>
+				</Menu.Item>
 			</Menu.Item>
 		</Menu>
 	);
