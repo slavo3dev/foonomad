@@ -2,6 +2,7 @@ import { contenfulData } from "../../utils/contentfulData";
 import "semantic-ui-css/semantic.min.css";
 import { Container, Grid, Icon} from "semantic-ui-react";
 import { ArticaleCard } from "../../componetns";
+import ReactMarkdown from "react-markdown";
 
 
 
@@ -88,7 +89,21 @@ export async function getStaticProps ()
 export default function Blog (props: any) 
 {
 	const { blogArticles } = props;
-	console.log("Blog Articles: ", blogArticles.items[0]);
+	const postComponents = blogArticles.items[ 0 ];
+	console.log( "Blog Articles: ", blogArticles.items[ 0 ] );
+	console.log( "----------------- BLOG -------------------" );
+	console.log( "fileds: ", postComponents.fields );
+	console.log("Title: ", postComponents.fields.title);
+	console.log( "slug: ", postComponents.fields.slug );
+	console.log( "isFeatured: ", postComponents.fields.isFeatured );
+	console.log( "TimeStemp: ", postComponents.fields.timestamp );
+	console.log( "Category: ", postComponents.fields.category );
+	console.log( "Excerpt: ", postComponents.fields.excerpt );
+	console.log( "featureImage: ", postComponents.fields.featureImage.fields );
+	console.log( "blogImage: ", postComponents.fields.blogImage.fields );
+	console.log( "TextBlog Data: ", postComponents.fields.textBlog.data );
+	console.log( "TextBlog Content: ", postComponents.fields.textBlog );
+	console.log("------------------- End ------------------");
     
 	return (
 		<Container>
@@ -111,6 +126,7 @@ export default function Blog (props: any)
 					}
 				</Grid.Row>
 			</Grid>
+			<ReactMarkdown children={postComponents.fields.postText} />
 		</Container>
 	);
 }
