@@ -1,7 +1,8 @@
 import { contenfulData } from "../../utils/contentfulData";
 import "semantic-ui-css/semantic.min.css";
 import ReactMarkdown from "react-markdown";
-import { useRouter } from "next/router";
+import {useRouter} from "next/router";
+
 
 export async function getStaticProps ()
 {

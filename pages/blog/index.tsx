@@ -2,8 +2,7 @@ import { contenfulData } from "../../utils/contentfulData";
 import "semantic-ui-css/semantic.min.css";
 import { Container, Grid, Icon} from "semantic-ui-react";
 import { ArticaleCard } from "../../componetns";
-import ReactMarkdown from "react-markdown";
-
+import Link from "next/link";
 
 
 
@@ -110,23 +109,23 @@ export default function Blog (props: any)
 			<h1>Articles</h1>
 			<Grid stackable>
 				<Grid.Row>
-					{
-						arrayOfBlogs.map( ( post ) => (
-							<Grid.Column width={ 4 }>
+					{ arrayOfBlogs.map( ( post ) => (
+						<Link href="/blog/remote-business-ideas">
+							<Grid.Column width={ 4 } style={{ border: "1px solid red"}}>
 								<ArticaleCard 
-									key={post.key}
+									key={post.key + Math.random()}
 									titleHeader={ post.titleHeader }
 									description={ post.textDescription }
 									urlImage={ post.urlImage }
 									extraInfo={ post.extraDitails }
 									category= { post.category}/>
 							</Grid.Column>
-						)
-						)
+						</Link>
+					)
+					)
 					}
 				</Grid.Row>
 			</Grid>
-			<ReactMarkdown children={postComponents.fields.postText} />
 		</Container>
 	);
 }
