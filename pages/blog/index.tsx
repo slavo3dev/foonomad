@@ -111,7 +111,7 @@ export default function Blog (props: any)
 				<Grid.Row>
 					{ arrayOfBlogs.map( ( post ) => (
 						<Link href="/blog/remote-business-ideas">
-							<Grid.Column width={ 4 } style={{ border: "1px solid red"}}>
+							<Grid.Column width={ 4 } >
 								<ArticaleCard 
 									key={post.key + Math.random()}
 									titleHeader={ post.titleHeader }
