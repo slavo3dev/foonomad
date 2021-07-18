@@ -1,6 +1,6 @@
 import "../styles/globals.css";
 import type { AppProps /*, AppContext */ } from "next/app";
-import { Footer, HeadComponent, MainHeader } from "../componetns";
+import { Footer, HeadComponent, MainNavigation } from "../componetns";
 import {  Fragment } from "react";
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -8,7 +8,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 		<Fragment>
 		
 			<HeadComponent />
-			<MainHeader />
+			<MainNavigation />
 			<Component { ...pageProps } />
 			<Footer />
 	
