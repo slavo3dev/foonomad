@@ -99,7 +99,7 @@ export function ContactForm() {
 				<div className={classes.control}>
 					<label htmlFor="message">Message</label>
 					<textarea
-						rows="5"
+						rows={ 5 }
 						id="message"
 						value={addMessage}
 						onChange={(event) => setMessage(event.target.value)}

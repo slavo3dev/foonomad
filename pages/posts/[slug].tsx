@@ -3,7 +3,7 @@ import { getPostData, getPostsFiles } from "../../lib/posts-util";
 import Head from "next/head";
 import { Fragment } from "react";
 
-export default function PostPage(props) {
+export default function PostPage(props: any) {
 	const { post } = props;
 	return (
 		<Fragment>
