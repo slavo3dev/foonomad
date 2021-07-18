@@ -2,6 +2,7 @@ import { contenfulData } from "../../utils/contentfulData";
 import "semantic-ui-css/semantic.min.css";
 import ReactMarkdown from "react-markdown";
 import {useRouter} from "next/router";
+import { Container } from "semantic-ui-react";
 
 
 export async function getStaticProps ()
@@ -40,29 +41,27 @@ export default function blogPost(props) {
 	console.log("ID: ",router.query.slug);
 	console.log("Post Text: ", postText);
 	
-	const postComponents = blogArticles.items[0];
+	const article = blogArticles.items[0];
 	console.log( "Blog Articles: ", blogArticles.items[ 0 ] );
 	console.log( "----------------- BLOG -------------------" );
-	console.log( "fileds: ", postComponents.fields );
-	console.log("Title: ", postComponents.fields.title);
-	console.log( "slug: ", postComponents.fields.slug );
-	console.log( "isFeatured: ", postComponents.fields.isFeatured );
-	console.log( "TimeStemp: ", postComponents.fields.timestamp );
-	console.log( "Category: ", postComponents.fields.category );
-	console.log( "Excerpt: ", postComponents.fields.excerpt );
-	console.log( "featureImage: ", postComponents.fields.featureImage.fields );
-	console.log( "blogImage: ", postComponents.fields.blogImage.fields );
-	console.log( "TextBlog Data: ", postComponents.fields.textBlog.data );
-	console.log( "TextBlog Content: ", postComponents.fields.textBlog );
+	console.log( "fileds: ", article.fields );
+	console.log("Title: ", article.fields.title);
+	console.log( "slug: ", article.fields.slug );
+	console.log( "isFeatured: ", article.fields.isFeatured );
+	console.log( "TimeStemp: ", article.fields.timestamp );
+	console.log( "Category: ", article.fields.category );
+	console.log( "Excerpt: ", article.fields.excerpt );
+	console.log( "featureImage: ", article.fields.featureImage.fields );
+	console.log( "blogImage: ", article.fields.blogImage.fields );
+	console.log( "TextBlog Data: ", article.fields.textBlog.data );
+	console.log( "TextBlog Content: ", article.fields.textBlog );
 	console.log("------------------- End ------------------");
 	
 	return (
-		<div>
-			<h1>Blog Post</h1>
-			<p> this is a text Blog post</p>
-			<p>-----------------------------</p>
+		<Container>
+			<h2>{article.fields.title}</h2>
 			<ReactMarkdown children={postText[0]} /> 
-		</div>
+		</Container>
 	);
 }
 

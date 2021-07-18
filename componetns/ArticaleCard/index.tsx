@@ -12,6 +12,7 @@ interface Props  {
 
 
 export const ArticaleCard = ({ titleHeader, description ,urlImage, extraInfo, category }: Props) => (
+	
 	<Card
 		image={ urlImage }
 		header={ titleHeader }
