@@ -1,4 +1,4 @@
-# www.foonomad.com
+# www.nrgnomad.com
 #### Blog - NextJS &amp; MongoDB
 
 ### How to run the app
