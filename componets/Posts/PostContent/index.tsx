@@ -9,10 +9,29 @@ import classes from "./postcontent.module.css";
 import Image from "next/image";
 
 SyntaxHighlighter.registerLanguage("js", js);
-SyntaxHighlighter.registerLanguage("css", css);
-export function PostContent(props: any) {
+SyntaxHighlighter.registerLanguage( "css", css );
+
+interface PostContent
+{
+	title: string;
+	image: string;
+	slug: string;
+	content: string;
+}
+
+interface Props
+{
+	post: {
+		title: string;
+		image: string;
+		slug: string;
+		content: string;
+	}
+}
+
+export function PostContent(props: Props) {
 	const { post } = props;
-	const { title, image, slug, content } = post;
+	const { title, image, slug, content }: PostContent = post;
 
 	const imagePath = `/images/posts/${slug}/${image}`;
 	const customRenderers = {
