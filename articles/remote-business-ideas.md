@@ -2,7 +2,7 @@
   slug: "remote-business-ideas"
   title: "Remote Business Ideas"
   image: "remote-business-ideas.png"
-  date: "2021-6-5"
+  date: "2021-6-6"
   excerpt: "Remote Business Ideas to Consider in 2021"
   author: "Slavo_3"
   isFeatured: true

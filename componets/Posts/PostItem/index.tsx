@@ -3,31 +3,10 @@ import PropTypes from "prop-types";
 import Link from "next/link";
 import Image from "next/image";
 import classes from "./postitem.module.css";
-
-interface DateTimeFormatOptions { 
-     localeMatcher?: string; 
-     weekday?: string; 
-     era?: string; 
-     year?: string; 
-     month?: string; 
-     day?: string; 
-     hour?: string; 
-     minute?: string; 
-     second?: string; 
-     timeZoneName?: string; 
-     formatMatcher?: string; 
-     hour12?: boolean; 
-     timeZone?: string; 
- } 
-
 export function PostItem(props) {
 	const { image, title, excerpt, date, slug } = props.post;
 
-	const formatedDate = new Date(date).toLocaleDateString("en-US", {
-		// date: "numeric",
-		month: "long",
-		year: "numeric",
-	});
+	const formatedDate = new Date(date).toLocaleDateString();
 
 	const imagePath = `/images/posts/${slug}/${image}`;
 	const linkPath = `/posts/${slug}`;
