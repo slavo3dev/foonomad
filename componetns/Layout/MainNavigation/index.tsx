@@ -21,9 +21,6 @@ export function MainNavigation() {
 					<li>
 						<Link href="/contact">Contact</Link>
 					</li>
-					<li>
-						<Link href="/login">Login</Link>
-					</li>
 				</ul>
 			</nav>
 		</header>
