@@ -35,12 +35,13 @@ export default function blogPost(props) {
 	const postText = blogArray.map( post => post.fields.slug === slugId ? post.fields.postText :  "### No Post Items"
 	);
 
+	
+	const article = blogArticles.items[0];
 
+	/* 
 	console.log("Blog Array: ". blogArray);
 	console.log("ID: ",router.query.slug);
 	console.log("Post Text: ", postText);
-	
-	const article = blogArticles.items[0];
 	console.log( "Blog Articles: ", blogArticles.items[ 0 ] );
 	console.log( "----------------- BLOG -------------------" );
 	console.log( "fileds: ", article.fields );
@@ -54,7 +55,7 @@ export default function blogPost(props) {
 	console.log( "blogImage: ", article.fields.blogImage.fields );
 	console.log( "TextBlog Content: ", article.fields.textBlog );
 	console.log("------------------- End ------------------");
-	
+	*/
 	return (
 		<Container>
 			<h2>{article.fields.title}</h2>
