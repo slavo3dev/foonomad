@@ -5,7 +5,11 @@ import Link from "next/link";
 interface Props  { 
 	titleHeader: string,
 	description: string,
-	urlImage: string,
+	urlImage: {
+		file: {
+			url: string
+		}
+	},
 	extraInfo: any,
 	category: string;
 	postUrl: string
@@ -13,13 +17,18 @@ interface Props  {
 
 
 
-export const ArticaleCard = ( { titleHeader, description, urlImage, extraInfo, category, postUrl}: Props ) => (
-	<li>
+
+
+export const ArticaleCard = ( { titleHeader, description, urlImage, extraInfo, category, postUrl}: Props ) => {
+	
+	console.log("Image URL: ", urlImage.file.url);
+	
+	return (
 		<Link href={ postUrl } >
 			<a>
 				<Grid.Column width={ 4 } >
 					<Card
-						image={ urlImage }
+						image={ urlImage.file.url }
 						header={ titleHeader }
 						meta={ category }
 						description={ description }
@@ -28,7 +37,6 @@ export const ArticaleCard = ( { titleHeader, description, urlImage, extraInfo, c
 				</Grid.Column>
 			</a>
 		</Link>
-	</li>
-);
+	);};
 
 

@@ -6,12 +6,10 @@ import {  Fragment } from "react";
 function MyApp({ Component, pageProps }: AppProps) {
 	return (
 		<Fragment>
-		
 			<HeadComponent />
 			<MainNavigation />
 			<Component { ...pageProps } />
 			<Footer />
-	
 		</Fragment>
 	);
 }
