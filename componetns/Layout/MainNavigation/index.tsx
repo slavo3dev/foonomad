@@ -13,16 +13,16 @@ export function MainNavigation() {
 			<nav>
 				<ul>
 					<li>
-						<Link href="/posts">About</Link>
+						<Link href="/about">About</Link>
 					</li>
 					<li>
-						<Link href="/events">Blog</Link>
+						<Link href="/blog">Blog</Link>
 					</li>
 					<li>
 						<Link href="/contact">Contact</Link>
 					</li>
 					<li>
-						<Link href="/contact">Login</Link>
+						<Link href="/login">Login</Link>
 					</li>
 				</ul>
 			</nav>
