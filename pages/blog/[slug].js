@@ -1,9 +1,8 @@
 import { contenfulData } from "../../utils/contentfulData";
 import "semantic-ui-css/semantic.min.css";
-import ReactMarkdown from "react-markdown";
 import {useRouter} from "next/router";
-import { Container } from "semantic-ui-react";
-
+import {Container} from "semantic-ui-react";
+import { PostContent } from "../../componetns";
 
 export async function getStaticProps ()
 {
@@ -53,14 +52,13 @@ export default function blogPost(props) {
 	console.log( "Excerpt: ", article.fields.excerpt );
 	console.log( "featureImage: ", article.fields.featureImage.fields );
 	console.log( "blogImage: ", article.fields.blogImage.fields );
-	console.log( "TextBlog Data: ", article.fields.textBlog.data );
 	console.log( "TextBlog Content: ", article.fields.textBlog );
 	console.log("------------------- End ------------------");
 	
 	return (
 		<Container>
 			<h2>{article.fields.title}</h2>
-			<ReactMarkdown children={postText[0]} /> 
+			<PostContent content={postText[0]} />
 		</Container>
 	);
 }
