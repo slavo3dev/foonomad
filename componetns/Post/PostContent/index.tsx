@@ -50,7 +50,7 @@ export function PostContent ( { content }: any )
     
 	return (
 		<article className={classes.content}>
-			<ReactMarkdown components={customRenderers}>
+			<ReactMarkdown components={ customRenderers }>
 				{content}
 			</ReactMarkdown>
 		</article>

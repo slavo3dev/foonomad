@@ -28,6 +28,7 @@ export const ArticaleCard = ( { titleHeader, description, urlImage, extraInfo, c
 			<a>
 				<Grid.Column width={ 4 } >
 					<Card
+						color='blue'
 						image={ urlImage.file.url }
 						header={ titleHeader }
 						meta={ category }
