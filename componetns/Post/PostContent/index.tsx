@@ -4,6 +4,7 @@ import js from "react-syntax-highlighter/dist/cjs/languages/prism/javascript";
 import css from "react-syntax-highlighter/dist/cjs/languages/prism/css";
 import classes from "./postcontent.module.css";
 import ReactMarkdown from "react-markdown";
+import { PostHeader } from "../PostHeader";
 
 
 SyntaxHighlighter.registerLanguage("js", js);
@@ -11,8 +12,9 @@ SyntaxHighlighter.registerLanguage( "css", css );
 
 
 
-export function PostContent ( { content }: any )
+export function PostContent ( props: any )
 {
+	const { content, imagePath, imageDescription, imageTitle } = props;
 	const customRenderers = {
 		p ( paragraph: any )
 		{
@@ -49,7 +51,11 @@ export function PostContent ( { content }: any )
 	};
     
 	return (
-		<article className={classes.content}>
+		<article className={ classes.content }>
+			<PostHeader
+				imageTitle={ imageTitle } 
+				imagePath={ imagePath } 
+				imageDescription={ imageDescription } />
 			<ReactMarkdown components={ customRenderers }>
 				{content}
 			</ReactMarkdown>

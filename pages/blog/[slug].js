@@ -38,28 +38,23 @@ export default function blogPost(props) {
 	
 	const article = blogArticles.items[0];
 
-	/* 
-	console.log("Blog Array: ". blogArray);
-	console.log("ID: ",router.query.slug);
-	console.log("Post Text: ", postText);
-	console.log( "Blog Articles: ", blogArticles.items[ 0 ] );
-	console.log( "----------------- BLOG -------------------" );
-	console.log( "fileds: ", article.fields );
-	console.log("Title: ", article.fields.title);
-	console.log( "slug: ", article.fields.slug );
-	console.log( "isFeatured: ", article.fields.isFeatured );
-	console.log( "TimeStemp: ", article.fields.timestamp );
-	console.log( "Category: ", article.fields.category );
-	console.log( "Excerpt: ", article.fields.excerpt );
-	console.log( "featureImage: ", article.fields.featureImage.fields );
-	console.log( "blogImage: ", article.fields.blogImage.fields );
-	console.log( "TextBlog Content: ", article.fields.textBlog );
-	console.log("------------------- End ------------------");
-	*/
+	const imagePath = article.fields.blogImage.fields.file.url;
+	const imageTitle = article.fields.blogImage.fields.title;
+	const imageDescription = article.fields.blogImage.fields.description;
+
+
+	console.log("article.fields.blogImage ", article.fields.blogImage);
+	console.log("ImageTitle SLUG: ", imageTitle);
+	console.log("ImageDescription: ", imageDescription );
+
 	return (
 		<Container>
-			<h2>{article.fields.title}</h2>
-			<PostContent content={postText[0]} />
+			<PostContent 
+				content={postText[0]}
+				imagePath={imagePath} 
+				imageTitle={imageTitle}
+				imageDescription={imageDescription}
+			/>
 		</Container>
 	);
 }
