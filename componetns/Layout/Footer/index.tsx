@@ -4,15 +4,9 @@ export const Footer = () =>
 {
 	return (
 		<footer className={ styles.footer }>
-			<a
-				href="https://www.nrgval.com"
-				target="_blank"
-				rel="noopener noreferrer"
-			>
-          Powered by NRG_VAL</a> &nbsp; &  &nbsp;<a
+			<p>Powered by <a
 				href="https://www.slavo3.com"
 				target="_blank"
-				rel="noopener noreferrer"
-			>Slavo3.com </a>
+				rel="noopener noreferrer">Slavo_3</a></p>
 		</footer>);
 };
