@@ -39,14 +39,18 @@ export function FeaturedPosts ( { posts }: any) {
 						if ( blog.fields.isFeatured === "true" )
 						{
 							return	(
-								<ArticaleCard
-									key={blog.fields.slug }
-									postUrl={ postUrl( blog.fields.slug ) }
-									titleHeader={ blog.fields.title }
-									description={ blog.fields.excerpt }
-									urlImage={ blog.fields.featureImage.fields }
-									extraInfo={ extra(blog.fields.timestamp) }
-									category={ blog.fields.category } />
+								<div style={{ padding: "5px"}}>
+									<ArticaleCard
+										key={blog.fields.slug }
+										postUrl={ postUrl( blog.fields.slug ) }
+										titleHeader={ blog.fields.title }
+										description={ blog.fields.excerpt }
+										urlImage={ blog.fields.featureImage.fields }
+										extraInfo={ extra(blog.fields.timestamp) }
+										category={ blog.fields.category } />
+								</div>
+								
+								
 							);
 						} 
 					}
