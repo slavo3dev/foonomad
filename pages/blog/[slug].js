@@ -35,17 +35,11 @@ export default function blogPost(props) {
 	const postText = blogArray.map( post => post.fields.slug === slugId ? post.fields.postText :  "### No Post Items"
 	);
 
-	
 	const article = blogArticles.items[0];
 
 	const imagePath = article.fields.blogImage.fields.file.url;
 	const imageTitle = article.fields.blogImage.fields.title;
 	const imageDescription = article.fields.blogImage.fields.description;
-
-
-	console.log("article.fields.blogImage ", article.fields.blogImage);
-	console.log("ImageTitle SLUG: ", imageTitle);
-	console.log("ImageDescription: ", imageDescription );
 
 	return (
 		<Container>

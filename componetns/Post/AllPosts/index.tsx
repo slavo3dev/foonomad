@@ -8,9 +8,6 @@ export function AllPosts ( { posts }: any )
 	const { blogArticles } = posts;
 	const blogs = blogArticles.items;
 
-	console.log( "BLOGS: ", blogs );
-	
-
 	const postUrl = ( slug: string ) =>
 	{
 		return `/blog/${ slug }`;

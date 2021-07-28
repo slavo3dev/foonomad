@@ -21,8 +21,6 @@ interface Props  {
 
 export const ArticaleCard = ( { titleHeader, description, urlImage, extraInfo, category, postUrl}: Props ) => {
 	
-	console.log("Image URL: ", urlImage.file.url);
-	
 	return (
 		<Link href={ postUrl } >
 			<a>
