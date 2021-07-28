@@ -25,14 +25,14 @@ export const getStaticPaths = async () => {
 	};
 };
 
-export default function blogPost(props) {
+export default function blogPost(props: any) {
 	
 	const {blogArticles} = props;
 	
 	const router = useRouter();
 	const slugId = router.query.slug;
 	const blogArray = blogArticles.items;
-	const postText = blogArray.map( post => post.fields.slug === slugId ? post.fields.postText :  "### No Post Items"
+	const postText = blogArray.map( ( post: any) => post.fields.slug === slugId ? post.fields.postText :  "### No Post Items"
 	);
 
 	const article = blogArticles.items[0];
