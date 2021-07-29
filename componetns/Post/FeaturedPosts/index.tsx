@@ -35,7 +35,6 @@ export function FeaturedPosts ( { posts }: any) {
 				<Grid.Row >
 					{ blogs.map( ( blog: any ) =>
 					{
-						
 						if ( blog.fields.isFeatured === "true" )
 						{
 							return	(
