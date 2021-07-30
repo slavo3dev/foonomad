@@ -1,6 +1,7 @@
 import "semantic-ui-css/semantic.min.css";
 import { contenfulData } from "../utils/contentfulData";
-import { FeaturedPosts } from "../componetns";
+import { FeaturedPosts, Hero } from "../componetns";
+
 
 
 export async function getStaticProps ()
@@ -20,6 +21,7 @@ export default function Home (props: any)
 	
 	return (
 		<>
+			<Hero />
 			<FeaturedPosts posts={props} />
 		</>
 	);
