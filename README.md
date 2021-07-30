@@ -59,6 +59,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ###### ( "blogImage: ", article.fields.blogImage.fields )
 
-##### ( "TextBlog Content: ", article.fields.textBlog )
-
-
+##### ( "TextBlog Content: ", article.fields.postText )
