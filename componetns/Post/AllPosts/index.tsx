@@ -34,9 +34,8 @@ export function AllPosts ( { posts }: any )
 			<Grid stackable>
 				<Grid.Row >
 					{ blogs.map( ( blog: any ) => (
-						<div style={{ padding: "5px"}}>
+						<div style={{ padding: "5px"}} key={blog.fields.slug }>
 							<ArticaleCard
-								key={blog.fields.slug }
 								postUrl={ postUrl( blog.fields.slug ) }
 								titleHeader={ blog.fields.title }
 								description={ blog.fields.excerpt }

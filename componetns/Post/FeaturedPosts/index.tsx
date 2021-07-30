@@ -38,9 +38,8 @@ export function FeaturedPosts ( { posts }: any) {
 						if ( blog.fields.isFeatured === "true" )
 						{
 							return	(
-								<div style={{ padding: "5px"}}>
+								<div style={{ padding: "5px"}} key={blog.fields.slug }>
 									<ArticaleCard
-										key={blog.fields.slug }
 										postUrl={ postUrl( blog.fields.slug ) }
 										titleHeader={ blog.fields.title }
 										description={ blog.fields.excerpt }
