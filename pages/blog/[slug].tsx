@@ -32,11 +32,13 @@ export default function blogPost(props: any) {
 	const router = useRouter();
 	const slugId = router.query.slug;
 	const blogArray = blogArticles.items;
-	const postText = blogArray.map( ( post: any) => post.fields.slug === slugId ? post.fields.postText :  "### No Post Items"
-	);
 
-	const article = blogArticles.items[0];
+	// Filter To find Article
+	const postContentArray = blogArray.filter( ( post: any ) => post.fields.slug.includes( slugId ) );
 
+	// Article Data
+	const article = postContentArray[ 0 ];
+	const postArticle = article.fields.postText;
 	const imagePath = article.fields.blogImage.fields.file.url;
 	const imageTitle = article.fields.blogImage.fields.title;
 	const imageDescription = article.fields.blogImage.fields.description;
@@ -44,7 +46,7 @@ export default function blogPost(props: any) {
 	return (
 		<Container>
 			<PostContent 
-				content={postText[0]}
+				content={postArticle}
 				imagePath={imagePath} 
 				imageTitle={imageTitle}
 				imageDescription={imageDescription}
