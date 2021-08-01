@@ -49,7 +49,6 @@ export default function Blog ( { blogArticles }: any )
 
 	return (
 		<>
-			<h1>Articles</h1>
 			<CategorySearch onSearch={findCategoryHandle} />
 			<AllPosts posts={posts} />
 		</>);

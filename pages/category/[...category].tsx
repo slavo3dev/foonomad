@@ -38,5 +38,10 @@ export default function Category ( props: any )
 
 	const categoryPosts = blogArticles.items.filter( (blog: any) => blog.fields.category.toLowerCase().replace( " ", "-" ) === slugId && blog );
 	
-	return <AllPosts posts={categoryPosts} />;
+	return (
+		<>
+			<h2 style={{ textAlign: "center", padding: "10px"}}>{slugId.toUpperCase().replace("-", " ") }</h2>
+			<AllPosts posts={ categoryPosts } />
+		</>
+	);
 }
