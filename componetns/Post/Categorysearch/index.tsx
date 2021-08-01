@@ -3,8 +3,10 @@ import { useRef } from "react";
 import { ButtonEvents } from "../../ui";
 import classes from "./category-search.module.css";
 
+
+
 export function CategorySearch(props: any) {
-	const categoryInputRef = useRef();
+	const categoryInputRef: any = useRef();
 
 	const categories = ["TypeScript", "Remote Business"];
 
