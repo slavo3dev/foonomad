@@ -29,7 +29,12 @@ export default function Category ( props: any )
 {
 	const {blogArticles} = props;
 	const router = useRouter();
-	const slugId = router?.query?.category[ 0 ] ;
+	const slugId = router?.query?.category[ 0 ];
+
+	if(!slugId ) {
+		console.error("No data here!");
+		return <h1>"Please Try To Reaload Page Again Again"</h1>;
+	}
 
 	const categoryPosts = blogArticles.items.filter( (blog: any) => blog.fields.category.toLowerCase().replace( " ", "-" ) === slugId && blog );
 	
