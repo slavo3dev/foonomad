@@ -1,6 +1,7 @@
 import { contenfulData } from "../../utils/contentfulData";
 import "semantic-ui-css/semantic.min.css";
-import {  AllPosts } from "../../componetns";
+import { AllPosts, CategorySearch } from "../../componetns";
+import { useRouter } from "next/router";
 
 
 
@@ -31,7 +32,25 @@ export async function getStaticProps ()
 	
 }
 
-export default function Blog ( props: any ) 
+export default function Blog ( { blogArticles }: any ) 
 {
-	return <AllPosts posts={props}/>;
+ 
+	const router = useRouter();
+
+	function findCategoryHandle ( category: string )
+	{
+		
+		const fullPath = `/category/${category}`;
+
+		router.push(fullPath);
+	}
+
+	const posts = blogArticles.items;
+
+	return (
+		<>
+			<h1>Articles</h1>
+			<CategorySearch onSearch={findCategoryHandle} />
+			<AllPosts posts={posts} />
+		</>);
 }

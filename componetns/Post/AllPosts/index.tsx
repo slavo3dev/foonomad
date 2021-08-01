@@ -2,12 +2,10 @@ import { ArticaleCard } from "../../ArticaleCard";
 import { Container, Grid, Icon } from "semantic-ui-react";
 
 
+
 export function AllPosts ( { posts }: any )
 {
-
-	const { blogArticles } = posts;
-	const blogs = blogArticles.items;
-
+		
 	const postUrl = ( slug: string ) =>
 	{
 		return `/blog/${ slug }`;
@@ -30,20 +28,18 @@ export function AllPosts ( { posts }: any )
     
 	return (
 		<Container>
-			<h1>Articles</h1>
 			<Grid stackable>
 				<Grid.Row >
-					{ blogs.map( ( blog: any ) => (
-						<div style={{ padding: "5px"}} key={blog.fields.slug }>
+					{ posts.map( ( post: any ) => (
+						<div style={{ padding: "5px"}} key={post.fields.slug }>
 							<ArticaleCard
-								postUrl={ postUrl( blog.fields.slug ) }
-								titleHeader={ blog.fields.title }
-								description={ blog.fields.excerpt }
-								urlImage={ blog.fields.featureImage.fields }
-								extraInfo={ extra(blog.fields.timestamp) }
-								category={ blog.fields.category } />
-						</div>
-						
+								postUrl={ postUrl( post.fields.slug ) }
+								titleHeader={ post.fields.title }
+								description={ post.fields.excerpt }
+								urlImage={ post.fields.featureImage.fields }
+								extraInfo={ extra(post.fields.timestamp) }
+								category={ post.fields.category } />
+						</div>	
 					)
 					)
 					}
