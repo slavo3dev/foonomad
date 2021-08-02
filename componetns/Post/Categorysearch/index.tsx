@@ -11,7 +11,7 @@ export function CategorySearch(props: any) {
 	function submitHandler(event: any) {
 		event.preventDefault();
 	
-		const selectedCategory = categoryInputRef.current!.value;
+		const selectedCategory = categoryInputRef?.current!.value;
 		const categorySlug = selectedCategory.toLowerCase().replace( " ", "-" );
 
 		props.onSearch(categorySlug);
