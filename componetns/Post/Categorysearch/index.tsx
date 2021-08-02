@@ -4,7 +4,7 @@ import classes from "./category-search.module.css";
 
 
 export function CategorySearch(props: any) {
-	const categoryInputRef = useRef<HTMLInputElement>(null);
+	const categoryInputRef = useRef<HTMLSelectElement>(null);
 
 	const categories = ["TypeScript", "Remote Business"];
 
