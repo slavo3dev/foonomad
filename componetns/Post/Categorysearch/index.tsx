@@ -1,19 +1,17 @@
 import { useRef } from "react";
-
 import { ButtonEvents } from "../../ui";
 import classes from "./category-search.module.css";
 
 
-
 export function CategorySearch(props: any) {
-	const categoryInputRef: any = useRef();
+	const categoryInputRef = useRef<HTMLInputElement>(null);
 
 	const categories = ["TypeScript", "Remote Business"];
 
 	function submitHandler(event: any) {
 		event.preventDefault();
 	
-		const selectedCategory = categoryInputRef?.current?.value;
+		const selectedCategory = categoryInputRef.current!.value;
 		const categorySlug = selectedCategory.toLowerCase().replace( " ", "-" );
 
 		props.onSearch(categorySlug);
