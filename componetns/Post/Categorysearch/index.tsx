@@ -6,7 +6,7 @@ import classes from "./category-search.module.css";
 export function CategorySearch(props: any) {
 	const categoryInputRef = useRef<HTMLSelectElement | null>( null );
 	
-	const categories = props.posts.map(( post: any ) => post.fields.category);
+	const categories: [string] = props.posts.map(( post: any ) => post.fields.category);
 
 	function submitHandler(event: any) {
 		event.preventDefault();
@@ -23,7 +23,7 @@ export function CategorySearch(props: any) {
 				<div className={classes.control}>
 					<label htmlFor="category">Category</label>
 					<select id="category" ref={ categoryInputRef }>
-						{ categories.map( category => <option key={category} value= {category} >{category}</option>)}
+						{ categories.map( (category: string )=> <option key={category} value= {category} >{category}</option>)}
 					</select>
 				</div>
 			</div>
