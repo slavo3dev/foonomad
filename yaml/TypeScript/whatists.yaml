@@ -1,10 +1,10 @@
 ## When we are writing TypeScript code, we are just writing JavaScript. 
 
-'''
+```js
   // TypeScript = JavaScript + A Type System 
   const name: string = "NRG Nomad";
   const isBlog: boolean = true;
-'''
+```
 
 ### TypeScript is very powerful compiler that you can run over your code to compile your typescript code to JavaScript.
 
@@ -29,4 +29,6 @@
 
 #### Start with TypeScript: 
 - install nodejs - https://nodejs.org/en/
-- sudo npm install -g typescript
+```js
+ const command: string = "sudo npm install -g typescript"
+```
