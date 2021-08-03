@@ -49,7 +49,7 @@ export default function Blog ( { blogArticles }: any )
 
 	return (
 		<>
-			<CategorySearch onSearch={findCategoryHandle} />
+			<CategorySearch onSearch={findCategoryHandle} posts={posts} />
 			<AllPosts posts={posts} />
 		</>);
 }

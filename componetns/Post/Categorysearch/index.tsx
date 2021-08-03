@@ -4,9 +4,9 @@ import classes from "./category-search.module.css";
 
 
 export function CategorySearch(props: any) {
-	const categoryInputRef = useRef<HTMLSelectElement | null>(null);
-
-	const categories = ["TypeScript", "Remote Business"];
+	const categoryInputRef = useRef<HTMLSelectElement | null>( null );
+	
+	const categories = props.posts.map(( post: any ) => post.fields.category);
 
 	function submitHandler(event: any) {
 		event.preventDefault();
