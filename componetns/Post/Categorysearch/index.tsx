@@ -6,7 +6,9 @@ import classes from "./category-search.module.css";
 export function CategorySearch(props: any) {
 	const categoryInputRef = useRef<HTMLSelectElement | null>( null );
 	
-	const categories: [string] = props.posts.map(( post: any ) => post.fields.category);
+	const categories: [string] = props.posts.map(( post: any ) => post.fields.category).sort().filter((item: string, index:number, arr:[]) => {
+		return !index || item != arr[index - 1];
+	});
 
 	function submitHandler(event: any) {
 		event.preventDefault();
