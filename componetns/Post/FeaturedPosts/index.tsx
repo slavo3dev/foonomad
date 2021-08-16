@@ -29,26 +29,26 @@ export function FeaturedPosts ( { posts }: any) {
 	};
     
 	return (
-		<Container>
+		<div style={ { textAlign: "center", width: "80%", margin: "auto", border: "1px solid red"}}>
 			<h1>Featured Posts</h1>
-			<Grid stackable>
+			<Grid stackable columns={5}>
 				<Grid.Row >
 					{ blogs.map( ( blog: any ) =>
 					{
 						if ( blog.fields.isFeatured === "true" )
 						{
 							return	(
-								<div style={{ padding: "5px"}} key={blog.fields.slug }>
-									<ArticaleCard
-										postUrl={ postUrl( blog.fields.slug ) }
-										titleHeader={ blog.fields.title }
-										description={ blog.fields.excerpt }
-										urlImage={ blog.fields.featureImage.fields }
-										extraInfo={ extra(blog.fields.timestamp) }
-										category={ blog.fields.category } />
+								<div style={ { padding: "5px" } } key={ blog.fields.slug }>
+									<Grid.Column>
+										<ArticaleCard
+											postUrl={ postUrl( blog.fields.slug ) }
+											titleHeader={ blog.fields.title }
+											description={ blog.fields.excerpt }
+											urlImage={ blog.fields.featureImage.fields }
+											extraInfo={ extra(blog.fields.timestamp) }
+											category={ blog.fields.category } />
+									</Grid.Column>
 								</div>
-								
-								
 							);
 						} 
 					}
@@ -56,6 +56,6 @@ export function FeaturedPosts ( { posts }: any) {
 					}
 				</Grid.Row>
 			</Grid>
-		</Container>);	
+		</div>);	
 }
 
