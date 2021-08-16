@@ -1,5 +1,4 @@
 import React from "react";
-import { Container } from "reactstrap";
 import Head from "next/head";
 import { useRouter } from "next/router";
 
@@ -7,16 +6,14 @@ import { useRouter } from "next/router";
 export const BasePage = (props: any) => {
 	const router = useRouter();
 	const {
-		noWrapper,
 		indexPage,
-		className = "",
+		className,
 		title = "Portfolio - NRG NOMAD",
 		metaDescription="My name is Slavo Popovic and I am an experienced software web engineer and freelance developer. The enthusiastic professional developer of web/chatbots/aws cloud who is used to fast-paced environments. Hardworking and effective as both a team leader and in an individual role",
 		canonicalPath,
 		children } = props;
 
 	const pageType = indexPage ? "index-page" : "base-page";
-	const Wrapper = noWrapper ? React.Fragment : Container;
 	return (
 		<>
 			<Head>
@@ -37,9 +34,9 @@ export const BasePage = (props: any) => {
 					href={`${process.env.BASE_URL}${canonicalPath ? canonicalPath : router.asPath}`} />
 			</Head>
 			<div className={`${pageType} ${className}`}>
-				<Wrapper>
+				<>
 					{children}
-				</Wrapper>
+				</>
 			</div>
 		</>
 	);
