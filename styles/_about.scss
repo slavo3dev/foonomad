@@ -33,12 +33,12 @@
     text-align: left;
   }
 
-// .fadein {
-//     opacity: 0;
+.fadein {
+    opacity: 0;
 
-//     @include animation(fadein 2s);
-//     @include animation-fill-mode(forwards);
-//   }
+    @include animation(fadein 2s);
+    @include animation-fill-mode(forwards);
+  }
 
 .title {
     @include animation-delay(0.7s);
