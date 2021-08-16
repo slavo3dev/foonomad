@@ -29,33 +29,35 @@ export function FeaturedPosts ( { posts }: any) {
 	};
     
 	return (
-		<div style={ { textAlign: "center", width: "80%", margin: "auto", border: "1px solid red"}}>
-			<h1>Featured Posts</h1>
-			<Grid stackable columns={5}>
-				<Grid.Row >
-					{ blogs.map( ( blog: any ) =>
-					{
-						if ( blog.fields.isFeatured === "true" )
+		<>
+			<h1 style={ { padding: "15px", textAlign: "center" } }>Featured Posts</h1>
+			<Container style={ { display:"flex", justifyContent: "center", width: "80%", margin: "auto"}}>
+				<Grid stackable columns={4} >
+					<Grid.Row >
+						{ blogs.map( ( blog: any ) =>
 						{
-							return	(
-								<div style={ { padding: "5px" } } key={ blog.fields.slug }>
-									<Grid.Column>
-										<ArticaleCard
-											postUrl={ postUrl( blog.fields.slug ) }
-											titleHeader={ blog.fields.title }
-											description={ blog.fields.excerpt }
-											urlImage={ blog.fields.featureImage.fields }
-											extraInfo={ extra(blog.fields.timestamp) }
-											category={ blog.fields.category } />
-									</Grid.Column>
-								</div>
-							);
-						} 
-					}
-					)
-					}
-				</Grid.Row>
-			</Grid>
-		</div>);	
+							if ( blog.fields.isFeatured === "true" )
+							{
+								return	(
+									<div style={ { padding: "5px" } } key={ blog.fields.slug }>
+										<Grid.Column width={ 4 }>
+											<ArticaleCard
+												postUrl={ postUrl( blog.fields.slug ) }
+												titleHeader={ blog.fields.title }
+												description={ blog.fields.excerpt }
+												urlImage={ blog.fields.featureImage.fields }
+												extraInfo={ extra(blog.fields.timestamp) }
+												category={ blog.fields.category } />
+										</Grid.Column>
+									</div>
+								);
+							} 
+						}
+						)
+						}
+					</Grid.Row>
+				</Grid>
+			</Container>
+		</>);	
 }
 
