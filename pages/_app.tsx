@@ -1,4 +1,5 @@
 import "../styles/globals.css";
+import "../styles/main.scss";
 import type { AppProps /*, AppContext */ } from "next/app";
 import { Footer, HeadComponent, MainNavigation } from "../componetns";
 import { Fragment } from "react";
