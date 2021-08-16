@@ -30,7 +30,7 @@ const About = () => {
 			<BasePage
 				title="About Me - NRG NOMAD"
 				className="about-page" />
-			<Container text>
+			<Container text style={ { justifyContent: "center", width: "50%", margin: "auto"}}>
 				<Header>
 					<div className="left-side">
 						<h1 className={`title ${createFadeInClass()}`}>NRG NOMAD</h1>
