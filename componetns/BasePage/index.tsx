@@ -6,14 +6,10 @@ import { useRouter } from "next/router";
 export const BasePage = (props: any) => {
 	const router = useRouter();
 	const {
-		indexPage,
-		className,
 		title = "Portfolio - NRG NOMAD",
 		metaDescription="My name is Slavo Popovic and I am an experienced software web engineer and freelance developer. The enthusiastic professional developer of web/chatbots/aws cloud who is used to fast-paced environments. Hardworking and effective as both a team leader and in an individual role",
-		canonicalPath,
-		children } = props;
+		canonicalPath,} = props;
 
-	const pageType = indexPage ? "index-page" : "base-page";
 	return (
 		<>
 			<Head>
@@ -33,11 +29,6 @@ export const BasePage = (props: any) => {
 					rel="canonical"
 					href={`${process.env.BASE_URL}${canonicalPath ? canonicalPath : router.asPath}`} />
 			</Head>
-			<div className={`${pageType} ${className}`}>
-				<>
-					{children}
-				</>
-			</div>
 		</>
 	);
 };

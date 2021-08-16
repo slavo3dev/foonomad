@@ -26,10 +26,11 @@ const About = () => {
 
 
 	return (
-		<Container text>
+		<>
 			<BasePage
-				title="About Me - Slavo_3"
-				className="about-page">
+				title="About Me - NRG NOMAD"
+				className="about-page" />
+			<Container text>
 				<Header>
 					<div className="left-side">
 						<h1 className={`title ${createFadeInClass()}`}>NRG NOMAD</h1>
@@ -45,9 +46,8 @@ const About = () => {
 					<p>Tech Stack: JavaScript / TypeScript, NEXTJS,  NodeJS, jQuery, React and React Native, Python, AWS, SEO, Wordpress, specializing in technical and industrial applications, mobile applications, and marketing integration. </p>
 					<a href="mailto:slavo@slavo3.com">➨ Book a FREE 30-minute consultation with me slavo@slavo3.com</a>
 				</div>
-			</BasePage>
-		
-		</Container>
+			</Container>
+		</>
 	);
 };
 
