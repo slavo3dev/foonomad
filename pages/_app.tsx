@@ -1,5 +1,6 @@
 import "../styles/globals.css";
 import "../styles/main.scss";
+import "semantic-ui-css/semantic.min.css";
 import type { AppProps /*, AppContext */ } from "next/app";
 import { Footer, HeadComponent, MainNavigation } from "../componetns";
 import { Fragment } from "react";
