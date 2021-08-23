@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import {BasePage } from "../../componetns";
+import { HeadBasePage } from "../../componetns";
 import { Container, Header } from "semantic-ui-react";
 
 declare global {
@@ -27,7 +27,7 @@ const About = () => {
 
 	return (
 		<>
-			<BasePage
+			<HeadBasePage
 				title="About Me - NRG NOMAD"
 				className="about-page" />
 			<Container text style={ { justifyContent: "center", width: "50%", margin: "auto"}}>

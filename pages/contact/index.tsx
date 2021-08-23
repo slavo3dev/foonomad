@@ -1,12 +1,12 @@
 import { Formik } from "formik";
 import { Form, Button, Segment } from "semantic-ui-react";
-import { BasePage } from "../../componetns";
+import { HeadBasePage } from "../../componetns";
  
 export default function contact ()
 {
 	return (
 		<Segment stacked>
-			<BasePage title="Contact Page" />
+			<HeadBasePage title="Contact Page" />
 			<h1>We'd Love to Hear From You</h1>
 			<Formik
 				initialValues={{ name: "", email: "", message: ""}}

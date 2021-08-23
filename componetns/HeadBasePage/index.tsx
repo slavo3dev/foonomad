@@ -3,7 +3,7 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 
 
-export const BasePage = (props: any) => {
+export const HeadBasePage = (props: any) => {
 	const router = useRouter();
 	const {
 		title = "Portfolio - NRG NOMAD",
@@ -25,6 +25,9 @@ export const BasePage = (props: any) => {
 				<meta property="og:image" key="og:image" content={`${process.env.BASE_URL}/images/section-1.png`} />
 				<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet"></link>
 				<link rel="icon" type="image/x-icon" href="/images/favicon.ico"/>
+				<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/semantic-ui@${props.versions.sui}/dist/semantic.min.css" />
+				<script async src="//cdn.jsdelivr.net/npm/semantic-ui@${props.versions.sui}/dist/semantic.min.js"
+				></script>
 				<link
 					rel="canonical"
 					href={`${process.env.BASE_URL}${canonicalPath ? canonicalPath : router.asPath}`} />
