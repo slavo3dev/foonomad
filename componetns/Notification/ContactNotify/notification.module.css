@@ -3,12 +3,12 @@
   justify-content: space-between;
   align-items: center;
   color: var(--color-grey-50);
-  background-color: var(--color-blue-800);
+  background-color: var(--color-error-500);
   padding: 0 var(--size-8);
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.2);
   position: fixed;
-  height: 5rem;
-  bottom: 0;
+  height: 6rem;
+  top: 0;
   width: 100%;
   left: 0;
   border-top-right-radius: 0;
@@ -26,7 +26,7 @@
 
 .success {
   background-color: var(--color-success-500);
-  color: var(--color-blue-800);
+  color: var(--color-grey-50);
 }
 
 .error {
