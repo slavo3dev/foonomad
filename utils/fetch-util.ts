@@ -9,7 +9,6 @@ interface MessageForm
 export async function sendContactData ( contactDetails: MessageForm )
 {
 	
-	console.log( "Contact: ", contactDetails );
 	
 	const resposne = await fetch( "/api/contact", {
 		method: "POST",
