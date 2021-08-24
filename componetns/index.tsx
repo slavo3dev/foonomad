@@ -1,4 +1,4 @@
-import { Footer, HeadComponent, BodyLayout, MainNavigation} from "./Layout";
+import { Footer, BodyLayout, MainNavigation} from "./Layout";
 import { ArticaleCard } from "./ArticaleCard";
 import { SigninForm } from "./SigninForm";
 import { PostContent, AllPosts, FeaturedPosts, CategorySearch} from "./Post";
@@ -10,7 +10,6 @@ import { ContactForm } from "./ContactForm";
 export
 {
 	Footer,
-	HeadComponent,
 	BodyLayout,
 	ArticaleCard,
 	MainNavigation,

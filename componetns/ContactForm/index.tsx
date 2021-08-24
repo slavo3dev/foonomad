@@ -71,7 +71,6 @@ export function ContactForm ()
 					initialValues={{ name: "", email: "", message: ""}}
 					onSubmit={(values, actions) => {
 						setTimeout(() => {
-							alert(JSON.stringify(values, null, 2));
 							actions.setSubmitting( false );
 							sendMessageHandle(values);
 						}, 1000);
