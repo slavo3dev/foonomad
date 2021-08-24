@@ -109,7 +109,7 @@ export function ContactForm ()
 								onBlur={props.handleBlur}
 								value={ props.values.message }
 								name="message"
-								placeholder="Please, ask how we can help or leave a message/comment"
+								placeholder="Please, feel free to ask anything or leave a message/comment"
 							/>
 							{ props.errors.name && <div id="feedback">{ props.errors.name }</div> }
 							<Button type="submit" color='blue' fluid size='large'>Submit</Button>
