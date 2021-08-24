@@ -16,7 +16,7 @@ export default async function hendler ( req: NextApiRequest, res: NextApiRespons
       !message ||
       message.trim() === ""
 		) {
-			res.send(422).json({ meesage: "Invalid Input" });
+			res.status(422).json({ meesage: "Invalid Input" });
 			return;
 		}
 
