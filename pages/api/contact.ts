@@ -1,10 +1,5 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from "next";
-
-// type Data = {
-//   name: string
-// }
-
 import { MongoClient } from "mongodb";
 
 export default async function hendler ( req: NextApiRequest, res: NextApiResponse )
@@ -53,7 +48,7 @@ export default async function hendler ( req: NextApiRequest, res: NextApiRespons
 			newMessage.id = result.insertedId;
 		} catch (err) {
 			client.close();
-			res.send(500).json({ message: `Error: ${err}` });
+			res.status(500).json({ message: `Error: ${err}` });
 		}
 
 		client.close();
