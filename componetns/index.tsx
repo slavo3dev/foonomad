@@ -4,6 +4,22 @@ import { SigninForm } from "./SigninForm";
 import { PostContent, AllPosts, FeaturedPosts, CategorySearch} from "./Post";
 import { Hero } from "./Hero ";
 import { HeadBasePage } from "./HeadBasePage";
+import { ContactForm } from "./ContactForm";
 
 
-export { Footer, HeadComponent, BodyLayout, ArticaleCard, MainNavigation, SigninForm, PostContent, AllPosts, FeaturedPosts, Hero, CategorySearch, HeadBasePage};
+export
+{
+	Footer,
+	HeadComponent,
+	BodyLayout,
+	ArticaleCard,
+	MainNavigation,
+	SigninForm,
+	PostContent,
+	AllPosts,
+	FeaturedPosts,
+	Hero,
+	CategorySearch,
+	HeadBasePage,
+	ContactForm
+};
