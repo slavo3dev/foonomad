@@ -40,10 +40,12 @@ const About = () => {
 				</Header>
 				
 				<div className={`${createFadeInClass()}`}>
-					<p>I am an experienced software web engineer & freelance developer. </p>
-					<p>Self-Thought, Self-Directed &  motivated Software Developer who works effectively in a dynamic environment.<br /> Fluent in JavaScript / TypeScript. Know: Python, Go </p>
-					<p>Problem-solving Software Developer is successful at creating a seamless user experience throughout the entire product line. A highly focused developer is adept at streamlining complicated processes by incorporating minimalist design principles into the user experience.</p>
-					<p>Tech Stack: JavaScript / TypeScript, NEXTJS,  NodeJS, jQuery, React and React Native, Python, AWS, SEO, Wordpress, specializing in technical and industrial applications, mobile applications, and marketing integration. </p>
+					<p>I specialize in rapidly building online business, software companies and web applications</p>
+					<p>Self-Thought, Self-Directed Software Developer who works effectively in a dynamic environment.<br /> Fluent in JavaScript / TypeScript. Bonus: Python, Go </p>
+					<p>My blog is where I share and learn knowledge publicly, Except mainly front-end development, with a sprinkling of remote and nomadic lifestyles.</p>
+					<p>I'm trying to be less precious about writing, so I've started a snippets and notes section over here for smaller posts</p>
+					<p>Tech: JavaScript / TypeScript, NEXTJS,  NodeJS, React / React Native,AWS, SEO </p>
+					<p>Business: Remote Job SKills, Digital Nomad Life Style, Career Change, Courses Recommendation</p>
 					<a href="mailto:slavo@slavo3.com">➨ Book a FREE 30-minute consultation with me slavo@slavo3.com</a>
 				</div>
 			</Container>
