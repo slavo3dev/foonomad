@@ -9,7 +9,6 @@ import { MongoClient } from "mongodb";
 
 export default async function hendler ( req: NextApiRequest, res: NextApiResponse )
 {
-	console.log("Request Body: ", req.body);
 	if (req.method === "POST") {
 		const { contactDetails } = req.body;
 		const { email, name, message } = contactDetails;
