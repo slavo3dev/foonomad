@@ -2,6 +2,12 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { MongoClient } from "mongodb";
 
+
+interface Options  {
+	useNewUrlParser: boolean;
+	useUnifiedTopology: boolean;
+}
+
 export default async function hendler ( req: NextApiRequest, res: NextApiResponse )
 {
 	if (req.method === "POST") {
@@ -27,11 +33,11 @@ export default async function hendler ( req: NextApiRequest, res: NextApiRespons
 		};
 
 		let client;
+		
 
 		try {
 			client = await MongoClient.connect(
-				`mongodb+srv://${process.env.mongodb_username}:${process.env.mongodb_password}@${process.env.mongodb_contact_cluster}.wbdvr.mongodb.net/${process.env.mongodb_database}?retryWrites=true&w=majority`,
-				{ useNewUrlParser: true, useUnifiedTopology: true },
+				`mongodb+srv://${process.env.mongodb_username}:${process.env.mongodb_password}@${process.env.mongodb_contact_cluster}.wbdvr.mongodb.net/${process.env.mongodb_database}?retryWrites=true&w=majority`
 			);
 		} catch (err) {
 			res.status(500).json({ message: "Didnt connect to DB" + err });
