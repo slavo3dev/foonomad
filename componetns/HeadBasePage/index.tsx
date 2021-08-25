@@ -15,6 +15,7 @@ export const HeadBasePage = (props: any) => {
 			<Head>
 				<title>{title}</title>
 				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
+				<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
 				<meta name="description" key="description" content={metaDescription} />
 				<meta name="title" key="title" content={title} />
 				<meta property="og:title" key="og:title" content={title} />
