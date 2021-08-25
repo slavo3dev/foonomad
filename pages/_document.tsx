@@ -9,7 +9,6 @@ export default class MyDocument extends Document {
 		return (
 			<Html lang="en">
 				<Head>
-					<title>Software Web Development | ChatBot | SEO | Digital Marketing </title>
 					<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
 					<link rel="icon" href="/nrgnomad.svg" />
 					<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet" />

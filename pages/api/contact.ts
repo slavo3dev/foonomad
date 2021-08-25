@@ -3,9 +3,11 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import { MongoClient } from "mongodb";
 
 
-interface Options  {
-	useNewUrlParser: boolean;
-	useUnifiedTopology: boolean;
+interface NewMessage {
+	id: string;
+	email: string;
+	message: string;
+	name: string
 }
 
 export default async function hendler ( req: NextApiRequest, res: NextApiResponse )
@@ -26,7 +28,8 @@ export default async function hendler ( req: NextApiRequest, res: NextApiRespons
 			return;
 		}
 
-		const newMessage = {
+		const newMessage: NewMessage = {
+			id: "",
 			email,
 			message,
 			name,

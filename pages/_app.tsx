@@ -2,7 +2,7 @@ import "../styles/globals.css";
 import "../styles/main.scss";
 import "semantic-ui-css/semantic.min.css";
 import type { AppProps /*, AppContext */ } from "next/app";
-import { Footer, MainNavigation } from "../componetns";
+import { Footer, MainNavigation, HeadBasePage} from "../componetns";
 import { Fragment } from "react";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
@@ -32,6 +32,7 @@ function MyApp ( { Component, pageProps }: AppProps )
 
 	return (
 		<Fragment>
+			<HeadBasePage title="HeadBasePage" />
 			<MainNavigation />
 			<Component { ...pageProps } />
 			<Footer />
