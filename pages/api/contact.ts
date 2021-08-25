@@ -4,7 +4,7 @@ import { MongoClient } from "mongodb";
 
 
 interface NewMessage {
-	id: string;
+	id: any;
 	email: string;
 	message: string;
 	name: string
