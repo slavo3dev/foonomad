@@ -15,7 +15,7 @@ export function Hero() {
 				/>
 			</div>
 			<h1>N-R-G Nomad</h1>
-			<p>You could live your life right now.<br />Let that determine what you do, say and think</p>
+			<p>The future depends on what you do today.</p>
 			<Link href="/blog"><a><Button style={ { margin: "10px" } } size='big' inverted >Articles</Button></a></Link>
 		</section>
 	);
