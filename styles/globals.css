@@ -46,7 +46,7 @@ body {
   margin: 0;
   background-color: var(--color-grey-50);
   color: var(--color-blue-800);
-  font-family: 'Montserrat', 'Helvetica' !important;
+  font-family: "Quicksand", 'Montserrat', 'Helvetica' !important;
 }
 
 h1,

@@ -10,7 +10,7 @@ export const Footer = () =>
 
 				<Divider inverted section />
 				{/* <Image centered size='mini' src='/logo.png' alt="logo image" /> */}
-				<p><i>Power by @NRG_NOMAD</i></p>
+				<a href="https://www.slavo3.com" target="_blank"><i>Power by @slavo3</i></a>
 				<List horizontal inverted divided link size='small'>
 					<List.Item as='a' href='/about'> About Me</List.Item>
 					<List.Item as='a' href='/blog'>Blog</List.Item>

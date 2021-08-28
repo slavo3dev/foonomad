@@ -9,6 +9,19 @@
   padding: var(--size-8) 0;
 }
 
+.quote{
+  font-family: "Lato", "Work sans", sans-serif;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #cbffdc !important;
+}
+
+.quote:hover {
+  color: white !important;
+  font-size: 2rem;
+  transition: background-color 0.5s ease !important;
+}
+
 .image {
   width: 300px;
   height: 300px;

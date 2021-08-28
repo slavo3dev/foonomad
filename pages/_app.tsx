@@ -32,7 +32,7 @@ function MyApp ( { Component, pageProps }: AppProps )
 
 	return (
 		<Fragment>
-			<HeadBasePage title="HeadBasePage" />
+			<HeadBasePage title="Software WEB Development / SEO / ChatBot- Home Page" />
 			<MainNavigation />
 			<Component { ...pageProps } />
 			<Footer />
