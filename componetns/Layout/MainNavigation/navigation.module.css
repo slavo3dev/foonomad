@@ -23,6 +23,7 @@
 .header a {
   color: var(--color-blue-100);
   font-size: var(--size-4);
+  transition: color 0.5s ease !important;
 }
 
 .header a:hover,
