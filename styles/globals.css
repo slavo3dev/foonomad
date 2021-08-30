@@ -63,3 +63,16 @@ button {
   font: inherit;
   cursor: pointer;
 }
+
+.profile-image-hero {
+  display: inline-block;
+  margin: 0 0.5rem;
+
+  animation: fadeIn; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 3s; /* don't forget to set a duration! */
+}
+
+.animate__animated.animate__fadeIn {
+  --animate-duration: 3s;
+  --animate-delay: 0.9s;
+}

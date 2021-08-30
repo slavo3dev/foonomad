@@ -8,6 +8,7 @@ export function Hero() {
 		<section className={classes.hero}>
 			<div className={classes.image}>
 				<Image
+					className="animate__animated animate__fadeIn profile-image-hero"
 					src="/assets/images/profile/profile.jpeg"
 					alt="Profile Image, Software Developer"
 					width={300}
