@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@artsy/fresnel": "^1.7.0",
+    "animate.css": "^4.1.1",
     "contentful": "^8.4.2",
     "dotenv-load": "^2.0.0",
     "formik": "^2.2.9",
