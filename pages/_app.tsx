@@ -33,6 +33,7 @@ function MyApp ( { Component, pageProps }: AppProps )
 	return (
 		<Fragment>
 			<HeadBasePage title="Software WEB Development / SEO / ChatBot- Home Page" />
+			<div className="wallpaper" data-image="images/miami.jpg"></div>
 			<MainNavigation />
 			<Component { ...pageProps } />
 			<Footer />

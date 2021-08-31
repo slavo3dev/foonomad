@@ -5,7 +5,7 @@ import { Button } from "semantic-ui-react";
 
 export function Hero() {
 	return (
-		<section className={classes.hero}>
+		<section className={ classes.hero }>
 			<div className={classes.image}>
 				<Image
 					className="animate__animated animate__fadeIn profile-image-hero"
@@ -19,5 +19,6 @@ export function Hero() {
 			<p className={classes.quote}>The future depends on what<br /> you do today.</p>
 			<Link href="/blog"><a><Button style={ { margin: "10px" } } size='big' inverted >Articles</Button></a></Link>
 		</section>
+	
 	);
 }
