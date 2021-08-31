@@ -2,6 +2,7 @@ import "../styles/globals.css";
 import "../styles/main.scss";
 import "semantic-ui-css/semantic.min.css";
 import type { AppProps /*, AppContext */ } from "next/app";
+import { Footer, MainNavigation, HeadBasePage} from "../componetns";
 import { Fragment } from "react";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
@@ -29,7 +30,15 @@ function MyApp ( { Component, pageProps }: AppProps )
 	
 
 
-	return ( <Component { ...pageProps } /> );
+	return (
+		<Fragment>
+			<HeadBasePage title="Software WEB Development / SEO / ChatBot- Home Page" />
+			<div className="wallpaper" data-image="images/miami.jpg"></div>
+			<MainNavigation />
+			<Component { ...pageProps } />
+			<Footer />
+		</Fragment>
+	);
 }
 
 export default MyApp;
