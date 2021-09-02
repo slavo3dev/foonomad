@@ -21,15 +21,16 @@
 }
 
 .header a {
-  color: var(--color-blue-100);
-  font-size: var(--size-4);
+  color: var(--color-blue-100) !important;
+  font-size: var(--size-4) !important;
   transition: color 0.5s ease !important;
+  text-decoration: none !important;
 }
 
 .header a:hover,
 .header a:active,
 .header a.active {
-  color: var( --color-primary-100);
+  color: var( --color-primary-100) !important;;
 }
 
 @media (min-width: 768px) {
