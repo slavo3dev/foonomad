@@ -65,9 +65,16 @@ h3 {
   font-family: "Oswald", "Roboto", sans-serif;
 }
 
-a {
-  text-decoration: none;
-}
+/* a {
+  text-decoration: important;
+  color: white !important;
+  transition: 0.3s color ease-in-out;
+} */
+
+/* a:hover {
+  color: red; 
+  font-size: 2rem;
+} */
 
 button {
   font: inherit;
