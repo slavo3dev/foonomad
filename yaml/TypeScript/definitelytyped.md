@@ -6,11 +6,19 @@ TypeScript, we will not understand what react, nextjs or jsx/tsx is. We need to 
 
 Adding TypeScript to React and NextJS: 
 
-- React we will use ```npx create-react-app-typescript``` to add TypeScript to our React project.
+- React we will use 
+```js 
+  npx create-react-app-typescript
+``` 
+to add TypeScript to our React project.
   
-- NextJS, You can create a TypeScript project with ```npx create-next-app -ts```  , flag --ts ( typescript ) or to existing projects create empty `tsconfig.json` file in the root folder and run your project.
+- NextJS, You can create a TypeScript project with 
+  ```js 
+  npx create-next-app -ts
+  ```  
+  flag --ts ( typescript ) or to existing projects create empty "tsconfig.json" file in the root folder and run your project.
 
-The packages that we installed should explain what is ```jsx/tsx``` for us.
+The packages that we installed should explain what is "jsx/tsx" for us.
 
 TypeScript allows you to use 'Declaration Files", which are files that will enable describing the shape of code written. You can add files that we can reference to tell TypeScript, and I am also using this library. Use these types that just made up for you.
 
