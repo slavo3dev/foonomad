@@ -149,3 +149,5 @@ function isValidRating(
 }
 
 ```
+
+The narrowing is moving a variable from a less precise type to a more accurate type. We can use type narrowing to avoid type errors. TypeScript automatically narrows the type of a variable in conditional branches. Doing a truthly condition check will remove null and undefined from a type.
