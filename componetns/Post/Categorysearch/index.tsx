@@ -29,7 +29,7 @@ export function CategorySearch(props: any) {
 					</select>
 				</div>
 			</div>
-			<ButtonEvents>Find Category</ButtonEvents>
+			<ButtonEvents>Categories</ButtonEvents>
 		</form>
 	);
 }
