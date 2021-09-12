@@ -1,7 +1,7 @@
 
-Narrowing is moving a varibale from a less precise type to a more precise type. We can use type narrowing to avoid type errors.
+The narrowing is moving a variable from a less precise type to a more accurate type. We can use type narrowing to avoid type errors.
 
-Let's see on the example:
+Let's see the example:
 
 Imaginge that we have a function usersHandler
 
@@ -21,15 +21,15 @@ Inside the function we are initilaze random & transfoormRandomToUpperCase variab
   }
 ```
 
-As you can see random variable can be type of string or array of numbers. We are dealing here with a multiple types of the variable.
+As you can see, a random variable can be a type of string or array of numbers. We are dealing here with multiple types of the variable.
 
 ```js
     let random: string | number[] 
 ```
 
-If we try to transform random varibale to upperCase using javascript toUpperCase() function and assing to the initialzed value transfoormRandomToUpperCase. TypeScript will scream error.
+Suppose we try to transform random variable to upperCase using javascript toUpperCase() function and assign the initialized value transfoormRandomToUpperCase. TypeScript will scream error.
 
-Since we dont know , if we will het it here,a string or a number , we can't be certain that whis will be string and we will be able to call here function tu toUpperCase()
+Since we don't know if we will get it here, a string or a number, we can't be sure that this will be a string, and we will be able to call here function to toUpperCase().
 
 ```js
   
@@ -51,7 +51,7 @@ Since we dont know , if we will het it here,a string or a number , we can't be c
 
 So we need to do NARROWING.
 
-In the example below , we can narrow type specification is with simple "Else IF statement". We can check if variable random type is string we can use "toUpperCase()" function to make random string to upper case.
+In the example below, we can narrow type specification is with a simple "Else IF statement." We can check if a variable random type is a string. We can use the "toUpperCase()" function to make a "random" string to the upper case.
 
 ```js
   
