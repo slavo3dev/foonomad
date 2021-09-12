@@ -1,8 +1,8 @@
 
 
-const getAllProducts = async () =>
+const getAllProducts = async (): Promise<(string | number)[]> =>
 {
-	const products: ( string | number )[] = [ 1, 2, 3 ];
+	const products = [ 1, 2, 3, "Slavo"];
 	return products;
 };
 

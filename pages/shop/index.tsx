@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { InferGetServerSidePropsType } from "next";
-
+import getAllProducts from "../../framework/shopify/product/get-all-products";
 
 
 export default function contact ( { products }: InferGetServerSidePropsType<typeof getStaticProps> )
@@ -11,9 +11,9 @@ export default function contact ( { products }: InferGetServerSidePropsType<type
 	
 }
 
-export async function getStaticProps ( params: any )
+export async function getStaticProps ()
 {
-	const products: (string | number)[] = [ 1, 2, 3 ];
+	const products: (string | number)[] = await getAllProducts();
 
 	return {
 		props: {
