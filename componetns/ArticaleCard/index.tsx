@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Card, Grid, Transition } from "semantic-ui-react";
 import Link from "next/link";
 
@@ -24,15 +24,17 @@ export const ArticaleCard = ( { titleHeader, description, urlImage, extraInfo, c
 	const [ isEnabledAnimation, setIsEnabledAnimation] = useState(false);
 	const [ duration, setDuration ] = useState( 0 );
 	const [ animation, setAnimation ] = useState("");
-	const [visible, setVisible] = useState(true);
+	const [ visible, setVisible ] = useState( true );
+	
 
-	function messageHangler(){
+	function animationHandler(){
 		
 		if (!isEnabledAnimation){
 			setAnimation( "bounce" );
-			setDuration( 900 );
+			setDuration( 1000 );
 			setVisible( false );
-			setIsEnabledAnimation(true);
+			setIsEnabledAnimation( true );
+			console.log("Inside Animation");
 		} else
 		{
 			setAnimation("");
@@ -40,12 +42,17 @@ export const ArticaleCard = ( { titleHeader, description, urlImage, extraInfo, c
 			setVisible( true );
 			setIsEnabledAnimation(false);
 		}
+
+		console.log("-------------------------- Start ---------------------");
+		console.log("Hello: ", titleHeader );
+		console.log( "isEnabledAnimation: ", isEnabledAnimation );
+		console.log("-------------------------- end ---------------------");
 	}
 
 	
 	return (
 		<Link href={ postUrl } >
-			<a  onMouseEnter={() => messageHangler()}>
+			<a onMouseEnter={ () => animationHandler() }>
 				<Grid.Column width={ 4 } >
 					<Transition
 						animation={animation}
