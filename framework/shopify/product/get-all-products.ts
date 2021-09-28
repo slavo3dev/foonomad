@@ -1,8 +1,9 @@
+import { getAllProductsQuery,fetchApi } from "../utils";
 
 
-const getAllProducts = async (): Promise<(string | number)[]> =>
+const getAllProducts = async (): Promise<any> =>
 {
-	const products = [ 1, 2, 3, "Slavo"];
+	const products = await fetchApi({ query: getAllProductsQuery});
 	return products;
 };
 
