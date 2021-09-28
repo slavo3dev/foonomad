@@ -2,7 +2,7 @@ import "../styles/globals.css";
 import "../styles/main.scss";
 import "semantic-ui-css/semantic.min.css";
 import type { AppProps /*, AppContext */ } from "next/app";
-import { Footer, MainNavigation, HeadBasePage} from "../componetns";
+import { Footer, MainNavigation, HeadBasePage} from "../components";
 import { Fragment } from "react";
 import { useEffect } from "react";
 import { useRouter } from "next/router";

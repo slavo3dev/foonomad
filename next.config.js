@@ -8,3 +8,10 @@ dotenvLoad();
 const withNextEnv = nextEnv();
 // eslint-disable-next-line no-undef
 module.exports = withNextEnv();
+
+// module.exports = {
+// 	i18n: {
+// 		locales: ["en-US","es"],
+// 		defaultLocal: "en-US"
+// 	}
+// };

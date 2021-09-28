@@ -5,6 +5,7 @@ import { PostContent, AllPosts, FeaturedPosts, CategorySearch} from "./Post";
 import { Hero } from "./Hero ";
 import { HeadBasePage } from "./HeadBasePage";
 import { ContactForm } from "./ContactForm";
+import { ShopLayout } from "./Shop";
 
 
 export
@@ -20,5 +21,6 @@ export
 	Hero,
 	CategorySearch,
 	HeadBasePage,
-	ContactForm
+	ContactForm, 
+	ShopLayout
 };

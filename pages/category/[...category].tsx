@@ -1,7 +1,7 @@
 import "semantic-ui-css/semantic.min.css";
 import { contenfulData } from "../../utils/contentfulData";
 import { useRouter } from "next/router";
-import {  AllPosts } from "../../componetns";
+import {  AllPosts } from "../../components";
 
 
 export async function getStaticProps ()

@@ -1,6 +1,6 @@
 import "semantic-ui-css/semantic.min.css";
 import { contenfulData } from "../utils/contentfulData";
-import { FeaturedPosts, Hero } from "../componetns";
+import { FeaturedPosts, Hero } from "../components";
 
 
 

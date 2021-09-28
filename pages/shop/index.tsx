@@ -1,5 +1,6 @@
 import { InferGetServerSidePropsType } from "next";
 import getAllProducts from "../../framework/shopify/product/get-all-products";
+import { ShopLayout } from "@components/Shop";
 
 
 export default function contact ( { products }: InferGetServerSidePropsType<typeof getStaticProps> )
@@ -8,7 +9,7 @@ export default function contact ( { products }: InferGetServerSidePropsType<type
 	console.log("Props: ", products );
 	return (
 		<>
-			<h1>Shop Page</h1>
+			<ShopLayout />
 		</>);
 	
 }

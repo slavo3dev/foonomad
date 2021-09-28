@@ -16,9 +16,6 @@ interface Props  {
 }
 
 
-
-
-
 export const ArticaleCard = ( { titleHeader, description, urlImage, extraInfo, category, postUrl}: Props ) => {
 	
 	const [ isEnabledAnimation, setIsEnabledAnimation] = useState(false);

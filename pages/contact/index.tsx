@@ -1,4 +1,4 @@
-import { ContactForm } from "../../componetns";
+import { ContactForm } from "../../components";
 import { Container } from "semantic-ui-react";
 
  
