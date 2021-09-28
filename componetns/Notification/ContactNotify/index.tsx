@@ -5,8 +5,6 @@ export function ContactNotify(props: any) {
 	const { notification } = props;
 	const { title, message, status } = notification;
 
-	console.log("Notification Props: ", props);
-
 	let statusClasses = "";
 
 	if (status === "success") {
