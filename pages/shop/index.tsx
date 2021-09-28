@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { InferGetServerSidePropsType } from "next";
 import getAllProducts from "../../framework/shopify/product/get-all-products";
 
@@ -6,7 +5,7 @@ import getAllProducts from "../../framework/shopify/product/get-all-products";
 export default function contact ( { products }: InferGetServerSidePropsType<typeof getStaticProps> )
 {
 
-	console.log("Props: ", products.data.products);
+	console.log("Props: ", products );
 	return (
 		<>
 			<h1>Shop Page</h1>

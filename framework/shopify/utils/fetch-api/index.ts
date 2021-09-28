@@ -1,7 +1,8 @@
-import { Message } from "semantic-ui-react";
-type FetchParams = {query: string}
+type FetchParams = { query: string; }
 
-export const fetchApi = async ( { query }: FetchParams) =>
+type FetchResult<T> = { data: T}
+
+export const fetchApi = async<T>( { query }: FetchParams): Promise<FetchResult<T>> =>
 {
 	const url = "http://localhost:4000/graphql";
 	const response = await fetch ( url , {
