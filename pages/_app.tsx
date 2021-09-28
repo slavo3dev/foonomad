@@ -1,5 +1,6 @@
 import "../styles/globals.css";
 import "../styles/main.scss";
+import "../styles/shop-styles.css";
 import "semantic-ui-css/semantic.min.css";
 import type { AppProps /*, AppContext */ } from "next/app";
 import { Footer, MainNavigation, HeadBasePage} from "../components";

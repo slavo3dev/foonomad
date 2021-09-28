@@ -1,5 +1,6 @@
 import { InferGetServerSidePropsType } from "next";
 import getAllProducts from "../../framework/shopify/product/get-all-products";
+// import { ShopLayout } from "../../components";
 import { ShopLayout } from "@components/Shop";
 
 
