@@ -25,7 +25,7 @@
 ```js
   const firstName: string = "Slavo";
   const lastName: string = "Slavo";
-  const username: string = 'nrgnomad';
+  const username: string = 'Prototype.NEXT';
   const city: string = `Miami`;
   const greeting: string = `Hello ${firstName} ${lastName}`
   }
@@ -35,7 +35,8 @@
 
 #### The most basic datatype is the simple true/false value, which JavaScript and TypeScript call a boolean value
 
-#### The boolean know those two values, true or false. There is a Truthy/Falsy concept in JavaScript, which you should know is not related to data types. That some behind the scenes work JavaScript does at runtime when it sees specific values and if conditions. For example, number zero is a false value. 
+#### The boolean know those two values, true or false. There is a Truthy/Falsy concept in JavaScript, which you should know is not related to data types. That some behind the scenes work JavaScript does at runtime when it sees specific values and if conditions. For example, number zero is a false value
+
 ```js
   const isGood: boolean= true;
   const isLazy: string = false;

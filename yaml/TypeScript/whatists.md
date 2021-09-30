@@ -2,7 +2,7 @@
 
 ```js
   // TypeScript = JavaScript + A Type System 
-  const name: string = "NRG Nomad";
+  const name: string = "Prototype.NEXT";
   const isBlog: boolean = true;
 ```
 

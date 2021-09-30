@@ -65,7 +65,7 @@ export function ContactForm ()
 	return (
 		<>
 			<Segment stacked>
-				<HeadBasePage title="Contact Page - NRG NOMAD" />
+				<HeadBasePage title="Contact Page - Prototype.NEXT" />
 				<h1>We'd Love to Hear From You</h1>
 				<Formik
 					initialValues={{ name: "", email: "", message: ""}}
