@@ -16,7 +16,7 @@ Inside the function we are initilaze random & transfoormRandomToUpperCase variab
 
 ```js
   export function usersHandler(){
-      let random = Math.random() > 0.5 ? "nrg nomad" : [1,2]
+      let random = Math.random() > 0.5 ? "Prototype.NEXT" : [1,2]
       let transfoormRandomToUpperCase;
   }
 ```
@@ -35,14 +35,14 @@ Since we don't know if we will get it here, a string or a number, we can't be su
   
   export default function play(){
 
-      let random = Math.random() > 0.5 ? "NRG NOMAD" : [1,2]
+      let random = Math.random() > 0.5 ? "Prototype.NEXT" : [1,2]
       let transfoormRandomToUpperCase; 
 
     
 
        let transfoormRandomToUpperCase = random.toUpperCase()  // error 
     /* error 
-       Property "toUpperCase" doesnt exit on type "nrg nomad | number[]"  
+       Property "toUpperCase" doesnt exit on type "Prototype.NEXT | number[]"  
        Property "toUpperCase" doesnt exit on type "number[]" . ts(2339)
        */
   }
@@ -57,7 +57,7 @@ In the example below, we can narrow type specification is with a simple "Else IF
   
   export default function play(){
 
-      let random = Math.random() > 0.5 ? "NRG NOMAD" : [1,2]
+      let random = Math.random() > 0.5 ? "Prototype.NEXT" : [1,2]
       let transfoormRandomToUpperCase;
 
        // Narrowing

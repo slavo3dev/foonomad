@@ -28,12 +28,12 @@ const About = () => {
 	return (
 		<>
 			<HeadBasePage
-				title="About Me - NRG NOMAD"
+				title="About Me - Prototype.NEXT"
 				className="about-page" />
 			<Container text style={ { justifyContent: "center", width: "50%", margin: "auto"}}>
 				<Header>
 					<div className="left-side">
-						<h1 className={`title ${createFadeInClass()}`}>NRG NOMAD</h1>
+						<h1 className={`title ${createFadeInClass()}`}>Prototype.NEXT</h1>
 						<h4 className={`subtitle ${createFadeInClass()}`}>Slavo Popovic</h4>
 						<p className={`subsubTitle ${createFadeInClass()}`}>Feel free to read short description about me.</p>
 					</div>

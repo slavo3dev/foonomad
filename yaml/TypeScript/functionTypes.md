@@ -23,7 +23,7 @@
 
   const userOne: User = {
     username: "slavo3dev",
-    project: "NRG Nomad",
+    project: "Prototype.NEXT",
     years: 1
   }
 ```
@@ -34,7 +34,7 @@
   type Username = string
   type PersonLogFunction = (name: string) =>  string 
   
-  const username: string = "Slavo3 NRG Nomad"
+  const username: string = "Slavo3 Prototype.NEXT"
 
   const logUser: PersonLogFunction = (name) => {
     return name;
