@@ -1,10 +1,11 @@
+module.exports = {
+	plugins: ["tailwindcss"]
+};
+
+
 // module.exports = {
-// 	plugins: ["tailwindcss"]
+// 	plugins: [
+// 		require("tailwindcss"),
+// 	]
 // };
 
-
-module.exports = {
-	plugins: [
-		require("tailwindcss")
-	]
-};
