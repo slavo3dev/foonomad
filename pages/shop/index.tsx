@@ -1,7 +1,7 @@
 import { InferGetServerSidePropsType } from "next";
 import getAllProducts from "../../framework/shopify/product/get-all-products";
 // import { ShopLayout } from "../../components";
-import { ShopLayout, ProductCard } from "@components/Shop";
+import { ShopLayout, ProductCard, Grid } from "@components/Shop";
 import { Product } from "@common/types/product";
 
 
@@ -10,16 +10,16 @@ export default function contact ( { products }: InferGetServerSidePropsType<type
 
 	console.log("Props: ", products );
 	return (
-		<>
-			<ShopLayout>
+		<ShopLayout>
+			<Grid>
 				{ products.slice( 0, 3 ).map( (product: Product) =>
 					<ProductCard
-						key=   { product.id}
+						key={ product.id}
 						product={ product } />
 				)}
-				
-			</ShopLayout>
-		</>);
+			</Grid>
+		</ShopLayout>
+	);
 	
 }
 
