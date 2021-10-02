@@ -1,6 +1,8 @@
-
-
 .pSliderContainer {
+    height: 320px;
+}
+
+.pSliderRow {
    @apply flex flex-row;
 
    & > * {
