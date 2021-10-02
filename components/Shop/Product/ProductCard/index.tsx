@@ -26,6 +26,7 @@ export const ProductCard: FC<Props> = ( { product } ) =>
 				{
 					product.images && (
 						<Image
+							className={styles.productImage}
 							src={productImage}
 							alt={ product.name ?? "Product Image" }
 							height={540}

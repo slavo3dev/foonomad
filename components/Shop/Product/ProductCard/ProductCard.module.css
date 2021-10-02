@@ -1,6 +1,16 @@
 
 .productContainer {
-  @apply relative;
+  @apply relative max-h-full;
+
+  &:hover {
+    & .productBG:before {
+      transform: scale(0.99);
+    }
+
+    & .productImage {
+        transform:scale(1.15);
+    }
+  }
   
   &:nth-child(6n + 1) .productBG {
       @apply bg-red-600;
@@ -46,6 +56,10 @@
 
 .productPrice {
    @apply pb-4 pt-2 px-6 text-blue-600 font-semibold text-sm;
+
+}
+
+.productImage {
 
 }
 
