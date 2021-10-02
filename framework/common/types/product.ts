@@ -1,3 +1,4 @@
+import { CurrencyCode } from "./../../shopify/utils/schema/schema.d";
 
 export interface ProductImage
 {
@@ -6,6 +7,12 @@ export interface ProductImage
 }
 
 
+export interface ProductPrice
+{
+    value: number,
+    currencyCode: "USD" | "EUR" | string
+}
+
 export interface Product
 {
     id: string,
@@ -13,6 +20,7 @@ export interface Product
     description: string,
     slug: string,
     path: string,
-    images: ProductImage[]
+    images: ProductImage[],
+    price: ProductPrice
         
 }

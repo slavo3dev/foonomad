@@ -27,7 +27,7 @@
     background-color: #61DBFB;
 
     &:before {
-        @apply block w-full h-full bg-repeat-space;
+        @apply block w-full h-full bg-repeat-space transition-transform duration-700;
         content: "";
         background-image: url("/product-patter-test.svg");
     }
@@ -44,8 +44,11 @@
 
 
 .productTitle {
-  @apply font-bold;
+  @apply font-bold bg-blue-600; 
   line-height: 2.2em;
+  margin: 3px 3px 3px 0px;
+  padding: 5px;
+  border-bottom-right-radius: 6px 6px;
 
   & span {
     @apply py-4 px-6;
@@ -55,11 +58,12 @@
 
 
 .productPrice {
-   @apply pb-4 pt-2 px-6 text-blue-600 font-semibold text-sm;
+   @apply pb-4 pt-2 px-6 bg-blue-600 font-semibold text-sm;
+   border-bottom-right-radius: 6px 6px;
 
 }
 
 .productImage {
-
+   @apply transition-transform block duration-1000;
 }
 
