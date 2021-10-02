@@ -67,3 +67,23 @@
    @apply transition-transform block duration-1000;
 }
 
+.slimContainer {
+  text-align: center;
+}
+
+.slimProductTitle {
+  @apply font-bold bg-blue-600;
+  padding: 5px;
+
+  & span {
+    @apply py-4 px-6;
+    box-decoration-break: clone;
+  }
+}
+
+.slimProductPrice {
+   @apply pb-4 pt-2 px-6 bg-blue-600 font-semibold text-sm;
+    border-bottom-right-radius: 6px 6px;
+    border-bottom-left-radius: 6px 6px;
+}
+

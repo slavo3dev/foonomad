@@ -45,9 +45,14 @@ export const ProductCard: FC<Props> = ( { product, variant="simple" } ) =>
 
 
 	const slimProduct = (
-		<>
+		<div className={styles.slimContainer}>
 			<div>
-				<span>{product.name }</span>
+				<span>
+					<h3 className={ styles.slimProductTitle }>{ product.name }</h3>
+				</span>
+				<span className={ styles.slimProductPrice }>
+					{ product.price.value } { product.price.currencyCode}
+				</span>
 			</div>
 			{
 				product.images && (
@@ -62,7 +67,7 @@ export const ProductCard: FC<Props> = ( { product, variant="simple" } ) =>
 					/>
 				)
 			}
-		</>
+		</div>
 	);
 
 	return (
