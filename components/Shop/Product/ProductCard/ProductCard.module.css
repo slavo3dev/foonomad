@@ -1,0 +1,51 @@
+
+.productContainer {
+  @apply relative;
+  
+  &:nth-child(6n + 1) .productBG {
+      @apply bg-red-600;
+  }
+
+  &:nth-child(6n + 3) .productBG {
+      @apply bg-yellow-300;
+  }
+
+}
+
+.productBG {
+    @apply absolute inset-0 z-0; 
+    background-color: #61DBFB;
+
+    &:before {
+        @apply block w-full h-full bg-repeat-space;
+        content: "";
+        background-image: url("/product-patter-test.svg");
+    }
+}
+
+.productTag {
+  @apply absolute top-0 left-0 z-20;
+
+  & > * {
+    font-size: 2rem;
+    letter-spacing: 0.4px;
+  }
+}
+
+
+.productTitle {
+  @apply font-bold;
+  line-height: 2.2em;
+
+  & span {
+    @apply py-4 px-6;
+    box-decoration-break: clone;
+  }
+}
+
+
+.productPrice {
+   @apply pb-4 pt-2 px-6 text-blue-600 font-semibold text-sm;
+
+}
+

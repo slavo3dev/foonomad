@@ -2,6 +2,7 @@ import { Product } from "@common/types/product";
 import {FC} from "react";
 import Link from "next/link";
 import Image from "next/image";
+import styles from "./ProductCard.module.css";
 
 
 interface Props
@@ -16,10 +17,11 @@ export const ProductCard: FC<Props> = ( { product } ) =>
 	const productImage = product.images[0].url ?? placeholderImg;
 	return (
 		<Link href={ `/products/${ product.slug }` }>
-			<a>
-				<div>
-					<h1>{ product.name }</h1>
-					<span>$15</span>
+			<a className={ styles.productContainer }>
+				<div className={styles.productBG}></div>
+				<div className={styles.productTag}>
+					<h1 className={styles.productTitle}>{ product.name }</h1>
+					<span className={styles.productPrice }>$15</span>
 				</div>
 				{
 					product.images && (
