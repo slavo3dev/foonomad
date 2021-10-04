@@ -26,10 +26,10 @@ export function MainNavigation() {
 			</nav>
 			<nav>
 				<ul>
-					<li>
+					<li className={classes.icon}>
 						<Link href="/"><Bag style={{color: "white"}} /></Link>
 					</li>
-					<li>
+					<li className={classes.icon}> 
 						<Link href="/"><Heart style={{color: "white"}}/></Link>
 					</li>
 				</ul>
