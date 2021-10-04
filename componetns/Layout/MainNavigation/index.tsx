@@ -27,10 +27,10 @@ export function MainNavigation() {
 			<nav>
 				<ul>
 					<li>
-						<Link href="/contact"><Bag style={{color: "white"}} /></Link>
+						<Link href="/"><Bag style={{color: "white"}} /></Link>
 					</li>
 					<li>
-						<Link href="/contact"><Heart style={{color: "white"}}/></Link>
+						<Link href="/"><Heart style={{color: "white"}}/></Link>
 					</li>
 				</ul>
 			</nav>

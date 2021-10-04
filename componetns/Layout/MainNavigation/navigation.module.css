@@ -22,7 +22,7 @@
 
 .header a {
   color: var(--color-blue-100) !important;
-  font-size: var(--size-4) !important;
+  font-size: var(--size-6) !important;
   transition: color 0.5s ease !important;
   text-decoration: none !important;
 }
@@ -33,12 +33,11 @@
   color: var( --color-primary-100) !important;;
 }
 
-@media (min-width: 768px) {
-  .header ul {
-    gap: 0.5rem;
+@media (max-width: 500px) {
+  .header li {
+    margin: 6px;
   }
-
   .header a {
-    font-size: var(--size-5);
+    font-size: var(--size-4) !important;
   }
 }
