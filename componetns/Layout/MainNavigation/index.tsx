@@ -1,6 +1,7 @@
 import Link from "next/link";
 import classes from "./navigation.module.css";
 import { Logo } from "../Logo";
+import { Bag, Heart } from "../../Icons";
 
 export function MainNavigation() {
 	return (
@@ -20,6 +21,16 @@ export function MainNavigation() {
 					</li>
 					<li>
 						<Link href="/contact">Contact</Link>
+					</li>
+				</ul>
+			</nav>
+			<nav>
+				<ul>
+					<li>
+						<Link href="/contact"><Bag style={{color: "white"}} /></Link>
+					</li>
+					<li>
+						<Link href="/contact"><Heart style={{color: "white"}}/></Link>
 					</li>
 				</ul>
 			</nav>
