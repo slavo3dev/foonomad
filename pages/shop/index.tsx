@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { InferGetServerSidePropsType } from "next";
 import getAllProducts from "../../framework/shopify/product/get-all-products";
 
