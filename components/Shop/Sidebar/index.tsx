@@ -32,7 +32,7 @@ export const Sidebar: FC<Props> = ({ children, isOpen, onClose }) => {
 	return (
 		<>
 			{ isOpen ? (
-				<div className="fixed inset-0 overflow-hidden h-full z-50">
+				<div ref={ref} className="fixed inset-0 overflow-hidden h-full z-50">
 					<div className="absolute inset-0 overflow-hidden">
 						<div
 							onClick={onClose}
