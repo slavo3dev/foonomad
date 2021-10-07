@@ -4,6 +4,7 @@ import { FeaturedPosts, Hero } from "../components";
 
 
 
+
 export async function getStaticProps ()
 {
 	const data = await contenfulData();

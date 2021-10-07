@@ -2,10 +2,22 @@ import Link from "next/link";
 import classes from "./navigation.module.css";
 import { Logo } from "../Logo";
 import { Bag, Heart } from "../../Icons";
+import { useUI } from "@components/Context";
+import { Sidebar, CartSidebar } from "@components/Shop";
+
 
 export function MainNavigation() {
+
+	const { openSidebar, isSidebarOpen, closeSidebar } = useUI();
+
+
 	return (
-		<header className={classes.header}>
+		<header className={ classes.header }>
+			<Sidebar
+				onClose={ closeSidebar }
+				isOpen={isSidebarOpen}>
+				<CartSidebar />
+			</Sidebar>
 			<Link href="/">
 				<a>
 					<Logo />
@@ -26,11 +38,11 @@ export function MainNavigation() {
 			</nav>
 			<nav>
 				<ul>
-					<li className={classes.icon}>
-						<Link href="/"><Bag style={{color: "white"}} /></Link>
+					<li className={ classes.icon }>
+						<Link href="#"><a><Bag style={ { color: "white" } } onClick={openSidebar} /></a></Link>
 					</li>
 					<li className={classes.icon}> 
-						<Link href="/"><Heart style={{color: "white"}}/></Link>
+						<Link href="#"><a><Heart style={{color: "white"}}/></a></Link>
 					</li>
 				</ul>
 			</nav>

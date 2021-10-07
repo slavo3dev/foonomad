@@ -6,7 +6,8 @@ import { Hero } from "./Hero ";
 import { HeadBasePage } from "./HeadBasePage";
 import { ContactForm } from "./ContactForm";
 import { ShopLayout, ProductCard } from "./Shop";
-
+import { Heart, Bag, Check, Cross, Minus, Plus, Trash} from "./Icons";
+import { UIProvider } from "./Context";
 
 
 export
@@ -24,5 +25,13 @@ export
 	HeadBasePage,
 	ContactForm, 
 	ShopLayout,
-	ProductCard
+	ProductCard,
+	Heart,
+	Bag,
+	Check,
+	Cross,
+	Minus, 
+	Plus, 
+	Trash,
+	UIProvider
 };

@@ -3,11 +3,14 @@ import getAllProducts from "../../framework/shopify/product/get-all-products";
 // import { ShopLayout } from "../../components";
 import { ShopLayout, ProductCard, Grid, ProductSlider } from "@components/Shop";
 import { Product } from "@common/types/product";
+import { useUI } from "@components/Context";
 
 
-export default function contact ( { products }: InferGetServerSidePropsType<typeof getStaticProps> )
+export default function shop ( { products }: InferGetServerSidePropsType<typeof getStaticProps> )
 {
 
+	const UIcontext = useUI();
+	console.log("UI Context: ", UIcontext);
 	console.log("Props: ", products );
 	return (
 		<ShopLayout>
