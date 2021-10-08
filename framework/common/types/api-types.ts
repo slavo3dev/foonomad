@@ -3,7 +3,7 @@ import { ApiHooks } from "./hooks";
 export type ApiFetcherOptions = {
   query: string
   variables?: Variables
-  url?: any
+  url?: string
 }
 
 export type Variables = {[key: string]: string | any | undefined}
@@ -15,7 +15,7 @@ export type ApiFetcherResults<T> = {
 export interface ApiConfig {
   fetch<T>(options: ApiFetcherOptions): Promise<ApiFetcherResults<T>>
   checkoutCookie: string
-  apiUrl?: any
+  apiUrl?: string
 }
 
 

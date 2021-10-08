@@ -2,6 +2,8 @@
 import { GetStaticPaths, GetStaticPropsContext, InferGetStaticPropsType } from "next";
 import { getConfig } from "../../framework/shopify/product/config";
 import { getAllProductsPaths }from "../../framework/shopify/product/get-all-products-paths";
+import { getProduct } from "../../framework/shopify/product/get-product";
+
 
 
 // fetch all of the products slugs
@@ -20,12 +22,16 @@ export const getStaticPaths: GetStaticPaths = async () =>
 // provide product spefici data to the page
 export const getStaticProps = async ({
 	params }: GetStaticPropsContext<{slug: string}>
-) => {
+) =>
+{
+	const config = getConfig();
+	const { product } = await getProduct({
+		config,
+		variables: {slug: params?.slug}
+	});
 	return {
 		props: {
-			product: {
-				slug: params?.slug
-			}
+			product
 		}
 	};
 };
@@ -35,7 +41,7 @@ export default function ProductSlug({
 ) {
 	return (
 		<div>
-			{product.slug}
+			{JSON.stringify(product, null, 2)}
 		</div>
 	);
 }
