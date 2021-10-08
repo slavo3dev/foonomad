@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Card, Grid, Transition } from "semantic-ui-react";
 import Link from "next/link";
 
@@ -40,10 +40,6 @@ export const ArticaleCard = ( { titleHeader, description, urlImage, extraInfo, c
 			setIsEnabledAnimation(false);
 		}
 
-		console.log("-------------------------- Start ---------------------");
-		console.log("Hello: ", titleHeader );
-		console.log( "isEnabledAnimation: ", isEnabledAnimation );
-		console.log("-------------------------- end ---------------------");
 	}
 
 	
