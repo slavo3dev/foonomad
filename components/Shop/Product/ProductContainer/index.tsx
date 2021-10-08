@@ -1,5 +1,5 @@
 import cn from "classnames";
-import { FC, Key } from "react";
+import { FC } from "react";
 import s from "./ProductContainer.module.css";
 import Image from "next/image";
 import { Product } from "@common/types/product";
