@@ -1,9 +1,7 @@
 import { ShopLayout } from "./ShopLayout";
-import { ProductCard } from "./Product";
 import { Grid } from "./Shopui/Grid";
-import { ProductCarosaul } from "./ProductCarosaul";
+import { ProductCarosaul, ProductContainer, ProductCard, ProductSlider } from "./Product";
 import { CartSidebar } from "./CartSidebar";
 import { Sidebar } from "./Sidebar";
-import { ProductContainer } from "./ProductContainer";
 
-export { ShopLayout, ProductCard, Grid, ProductCarosaul, CartSidebar, Sidebar, ProductContainer};
+export { ShopLayout, ProductCard, Grid, ProductCarosaul, CartSidebar, Sidebar, ProductContainer, ProductSlider};
