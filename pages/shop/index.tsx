@@ -1,7 +1,7 @@
 import { InferGetServerSidePropsType } from "next";
 import getAllProducts from "../../framework/shopify/product/get-all-products";
 // import { ShopLayout } from "../../components";
-import { ShopLayout, ProductCard, Grid, ProductSlider } from "@components/Shop";
+import { ShopLayout, ProductCard, Grid, ProductCarosaul } from "@components/Shop";
 import { Product } from "@common/types/product";
 import { useUI } from "@components/Context";
 
@@ -22,14 +22,14 @@ export default function shop ( { products }: InferGetServerSidePropsType<typeof 
 						product={ product } />
 				)}
 			</Grid>
-			<ProductSlider>
+			<ProductCarosaul>
 				{ products.slice( 0, 3 ).map( (product: Product) =>
 					<ProductCard
 						variant="slim"
 						key={ product.id}
 						product={ product } />
 				)}
-			</ProductSlider>
+			</ProductCarosaul>
 		</ShopLayout>
 	);
 	

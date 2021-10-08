@@ -3,6 +3,8 @@ import { GetStaticPaths, GetStaticPropsContext, InferGetStaticPropsType } from "
 import { getConfig } from "../../framework/shopify/product/config";
 import { getAllProductsPaths }from "../../framework/shopify/product/get-all-products-paths";
 import { getProduct } from "../../framework/shopify/product/get-product";
+import { Container } from "semantic-ui-react";
+import { ProductContainer } from "@components/Shop";
 
 
 
@@ -36,12 +38,14 @@ export const getStaticProps = async ({
 	};
 };
 
-export default function ProductSlug({
+export default function ProductSlug ( {
 	product }: InferGetStaticPropsType<typeof getStaticProps>
-) {
+)
+{
 	return (
-		<div>
-			{JSON.stringify(product, null, 2)}
-		</div>
+		<Container>
+			{ product && <ProductContainer product={ product } /> }
+		</Container>
 	);
+
 }

@@ -1,5 +1,5 @@
 import { ReactNode, FC } from "react";
-import styles from "./ProductSlider.module.css";
+import styles from "./ProductCarosaul.module.css";
 import Ticker from "react-ticker";
 
 interface Props
@@ -7,7 +7,7 @@ interface Props
     children: ReactNode[];
 }
 
-export const ProductSlider: FC<Props> = ({ children }) =>
+export const ProductCarosaul: FC<Props> = ({ children }) =>
 {
 	return (
 		<div className={ styles.pSliderContainer }>
