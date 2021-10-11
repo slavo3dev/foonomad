@@ -9,7 +9,7 @@
   }
 
   &:hover {
-    @apply transform scale-110 text-primary border border-secondary;
+    @apply transform scale-110 text-blue-100 border border-black;
   }
 
   &:focus {
@@ -32,6 +32,6 @@
 
 .active {
   &.size, &.color {
-    @apply border-accents-9 border-2;
+    @apply border-red-400 border-2;
   }
 }

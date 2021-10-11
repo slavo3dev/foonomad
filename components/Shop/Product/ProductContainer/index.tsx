@@ -1,5 +1,5 @@
 import cn from "classnames";
-import { FC } from "react";
+import { FC, useState } from "react";
 import s from "./ProductContainer.module.css";
 import Image from "next/image";
 import { Product } from "@common/types/product";
@@ -10,7 +10,10 @@ interface Props {
   product: Product
 }
 
-export const ProductContainer: FC<Props> = ({ product }: any) => {
+export const ProductContainer: FC<Props> = ( { product }: any ) =>
+{
+	
+	const [ choices, setChoices ] = useState({});
 
 	return (
 		<>
@@ -45,7 +48,14 @@ export const ProductContainer: FC<Props> = ({ product }: any) => {
 										<ProductVariation
 											key={`${option.id}-${optValue.label}`}
 											label={optValue.label}
-											color={optValue.hexColor}
+											color={ optValue.hexColor }
+											variant={option.displayName}
+											onClick={() => {
+												setChoices({
+													...choices,
+													[option.displayName.toLowerCase()]: optValue.label.toLowerCase()
+												});
+											}}
 										/>
 									)}
 								</div>
