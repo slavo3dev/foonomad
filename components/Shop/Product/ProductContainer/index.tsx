@@ -10,10 +10,16 @@ interface Props {
   product: Product
 }
 
+type AvailableChoices = "color" | "size" | string
+
+type Choices = {
+  [P in AvailableChoices]: string
+}
+
 export const ProductContainer: FC<Props> = ( { product }: any ) =>
 {
 	
-	const [ choices, setChoices ] = useState({});
+	const [ choices, setChoices ] = useState<Choices>({});
 
 	return (
 		<>
