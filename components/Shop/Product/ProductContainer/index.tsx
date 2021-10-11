@@ -7,6 +7,9 @@ import { ProductSlider, ProductVariation } from "@components/Shop";
 import { Btn } from "@components/ui";
 import { Choices, getVariant } from "../helpers";
 import { useUI } from "@components/Context";
+import { useAddItem } from "@common/cart/use-add-item";
+
+
 
 interface Props {
   product: Product
@@ -17,7 +20,9 @@ export const ProductContainer: FC<Props> = ({ product }) =>
 {
 	
 	const [ choices, setChoices ] = useState<Choices>( {} );
+	
 	const { openSidebar } = useUI();
+	const addItem = useAddItem();
 	
 	const variant = getVariant( product, choices );
 	
@@ -29,7 +34,8 @@ export const ProductContainer: FC<Props> = ({ product }) =>
 				variantOptions: variant?.options
 			};
 
-			alert(JSON.stringify(item));
+			const output = addItem(item);
+			alert(JSON.stringify(output));
 			openSidebar();
 		} catch {() => console.log("error Message");}
 	};

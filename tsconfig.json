@@ -19,6 +19,7 @@
 			"@common/*": ["framework/common/*"],
 			"@framework": ["framework/shopfy"],
 			"@framework/*": ["framework/shopfy/*"],
+			"@shopify/*": ["framework/shopify/*"],
 			"@components/*": ["components/*"],
 			"@assets/*": ["assets/*"],
 			"@lib/*": ["lib/*"]
