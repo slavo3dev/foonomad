@@ -3,7 +3,7 @@ import { FC } from "react";
 import s from "./ProductContainer.module.css";
 import Image from "next/image";
 import { Product } from "@common/types/product";
-import { ProductSlider } from "@components/Shop";
+import { ProductSlider, ProductVariation } from "@components/Shop";
 import { Btn } from "@components/ui";
 
 interface Props {
@@ -37,12 +37,22 @@ export const ProductContainer: FC<Props> = ({ product }: any) => {
 				</div>
 				<div className={s.sidebar}>
 					<section>
-						<div className="pb-4">
-							<h2 className="uppercase font-medium">Color</h2>
-							<div className="flex flex-row py-4">
-                Variant Options Here!
+						{ product.options.map(option =>
+							<div key={option.id} className="pb-4">
+								<h2 className="uppercase font-medium">{option.displayName}</h2>
+								<div className="flex flex-row py-4">
+									{ option.values.map(optValue =>
+										<ProductVariation
+											key={`${option.id}-${optValue.label}`}
+											label={optValue.label}
+											color={optValue.hexColor}
+										/>
+									)}
+								</div>
 							</div>
-						</div>
+            
+						) }
+						
 						<div className="pb-14 break-words w-full max-w-xl text-lg"> { product.description }</div>
 					</section>
 					<div>
