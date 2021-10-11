@@ -5,21 +5,34 @@ import Image from "next/image";
 import { Product } from "@common/types/product";
 import { ProductSlider, ProductVariation } from "@components/Shop";
 import { Btn } from "@components/ui";
+import { Choices, getVariant } from "../helpers";
+import { useUI } from "@components/Context";
 
 interface Props {
   product: Product
 }
 
-type AvailableChoices = "color" | "size" | string
 
-type Choices = {
-  [P in AvailableChoices]: string
-}
-
-export const ProductContainer: FC<Props> = ( { product }: any ) =>
+export const ProductContainer: FC<Props> = ({ product }) =>
 {
 	
-	const [ choices, setChoices ] = useState<Choices>({});
+	const [ choices, setChoices ] = useState<Choices>( {} );
+	const { openSidebar } = useUI();
+	
+	const variant = getVariant( product, choices );
+	
+	const addToCart = () => {
+		try {
+			const item = {
+				productId: String(product.id),
+				variantId: variant?.id,
+				variantOptions: variant?.options
+			};
+
+			alert(JSON.stringify(item));
+			openSidebar();
+		} catch {() => console.log("error Message");}
+	};
 
 	return (
 		<>
@@ -30,7 +43,7 @@ export const ProductContainer: FC<Props> = ( { product }: any ) =>
 						<div className={s.price}>{product.price.value}</div>
 					</div>
 					<ProductSlider>
-						{ product.images.map( ( image: { url: string, alt: string}) =>
+						{ product.images.map((image) =>
 							<div key={image.url} className={s.imageContainer}>
 								<Image
 									className={s.img}
@@ -50,19 +63,26 @@ export const ProductContainer: FC<Props> = ( { product }: any ) =>
 							<div key={option.id} className="pb-4">
 								<h2 className="uppercase font-medium">{option.displayName}</h2>
 								<div className="flex flex-row py-4">
-									{ option.values.map(optValue =>
-										<ProductVariation
-											key={`${option.id}-${optValue.label}`}
-											label={optValue.label}
-											color={ optValue.hexColor }
-											variant={option.displayName}
-											onClick={() => {
-												setChoices({
-													...choices,
-													[option.displayName.toLowerCase()]: optValue.label.toLowerCase()
-												});
-											}}
-										/>
+									{ option.values.map( optValue =>{
+
+										const activeChoice = choices[option.displayName.toLowerCase()];
+
+										return (
+											<ProductVariation
+												key={`${option.id}-${optValue.label}`}
+												label={optValue.label}
+												color={ optValue.hexColor }
+												variant={option.displayName}
+												active={optValue.label.toLowerCase() === activeChoice}
+												onClick={() => {
+													setChoices({
+														...choices,
+														[option.displayName.toLowerCase()]: optValue.label.toLowerCase()
+													});
+												}}
+											/>
+										);
+									}
 									)}
 								</div>
 							</div>
@@ -74,7 +94,7 @@ export const ProductContainer: FC<Props> = ( { product }: any ) =>
 					<div>
 						<Btn
 							className={s.button}
-							onClick={() => alert("adding to cart")}
+							onClick={addToCart}
 						>
               Add to Cart
 						</Btn>

@@ -19,7 +19,9 @@
 			"@common/*": ["framework/common/*"],
 			"@framework": ["framework/shopfy"],
 			"@framework/*": ["framework/shopfy/*"],
-			"@components/*": ["components/*"]
+			"@components/*": ["components/*"],
+			"@assets/*": ["assets/*"],
+			"@lib/*": ["lib/*"]
 		}
 	},
 	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
