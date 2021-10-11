@@ -4,6 +4,7 @@ import s from "./ProductContainer.module.css";
 import Image from "next/image";
 import { Product } from "@common/types/product";
 import { ProductSlider } from "@components/Shop";
+import { Btn } from "@components/ui";
 
 interface Props {
   product: Product
@@ -13,7 +14,7 @@ export const ProductContainer: FC<Props> = ({ product }: any) => {
 
 	return (
 		<>
-			<div className={cn(s.rootContainer, "fit")}>
+			<div className={cn(s.rootContainer, "fit", "mb-5")}>
 				<div className={cn(s.productDisplay, "fit")}>
 					<div className={s.nameBox}>
 						<h1 className={s.name}>{product.name}</h1>
@@ -45,13 +46,12 @@ export const ProductContainer: FC<Props> = ({ product }: any) => {
 						<div className="pb-14 break-words w-full max-w-xl text-lg"> { product.description }</div>
 					</section>
 					<div>
-						<button
-							onClick={() => { alert("BTN");}}
-							aria-label="Add to Cart"
+						<Btn
 							className={s.button}
+							onClick={() => alert("adding to cart")}
 						>
               Add to Cart
-						</button>
+						</Btn>
 					</div>
 				</div>
 			</div>

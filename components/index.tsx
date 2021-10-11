@@ -8,7 +8,7 @@ import { ContactForm } from "./ContactForm";
 import { ShopLayout, ProductCard } from "./Shop";
 import { Heart, Bag, Check, Cross, Minus, Plus, Trash} from "./Icons";
 import { UIProvider } from "./Context";
-
+import { Btn } from "./ui";
 
 export
 {
@@ -33,5 +33,6 @@ export
 	Minus, 
 	Plus, 
 	Trash,
-	UIProvider
+	UIProvider,
+	Btn
 };

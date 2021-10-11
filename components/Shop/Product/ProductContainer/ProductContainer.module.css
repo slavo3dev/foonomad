@@ -8,7 +8,7 @@
 }
 
 .productDisplay {
-  @apply relative flex px-0 pb-0 box-border col-span-1 bg-blue-200 opacity-60;
+  @apply relative flex px-0 pb-0 box-border col-span-1 bg-blue-200 opacity-80;
   min-height: 600px;
 
   @screen md {

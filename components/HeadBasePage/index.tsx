@@ -28,7 +28,9 @@ export const HeadBasePage = (props: any) => {
 				<link rel="icon" type="image/x-icon" href="/images/favicon.ico"/>
 				<link
 					rel="canonical"
-					href={`${process.env.BASE_URL}${canonicalPath ? canonicalPath : router.asPath}`} />
+					href={ `${ process.env.BASE_URL }${ canonicalPath ? canonicalPath : router.asPath }` } />
+				<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/keen-slider@latest/keen-slider.min.css" />
+				<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"></link>
 			</Head>
 		</>
 	);
