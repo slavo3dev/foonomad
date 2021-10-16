@@ -2,14 +2,14 @@ import {
 	ApiFetcherOptions,
 	ApiFetcherResults
 } from "@common/types/api-types";
+import { API_URL } from "../const";
 
 export const fetchApi = async <T> ( {
-	url = "http://localhost:4000/graphql",
 	query,
 	variables }: ApiFetcherOptions
 ): Promise<ApiFetcherResults<T>> =>
 {
-	const response = await fetch ( url , {
+	const response = await fetch ( API_URL , {
 		method: "POST",
 		headers: {
 			"Content-Type": "application/json"

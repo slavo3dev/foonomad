@@ -18,7 +18,6 @@ export const getProduct = async (options: {config: ApiConfig, variables: Variabl
 
 	const { data } = await config.fetch<FetchType>({
 		query: getProductQuery,
-		url: config.apiUrl,
 		variables
 	} );
     
