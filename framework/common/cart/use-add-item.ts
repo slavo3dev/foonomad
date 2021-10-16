@@ -1,5 +1,5 @@
 
-import { useHook } from "@lib/use-hooks";
+import { useHook, useMutationHook } from "@lib/use-hooks";
 
 
 
@@ -9,7 +9,5 @@ export const useAddItem = () => {
 		return hooks.cart.useAddItem;
 	});
 
-	return hook.useHook({
-		fetch: hook.fetcher
-	});
+	return useMutationHook({...hook});
 };
