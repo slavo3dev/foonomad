@@ -34,7 +34,7 @@ const useData = (hook: any, fetcher: ApiFetcher, ctx: any) => {
 		});
 		
 	};
-
+    
 	const response = useSWR(
 		hook.fetcherOptions.query,
 		hookFetcher,

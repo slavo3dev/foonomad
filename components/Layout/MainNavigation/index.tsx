@@ -4,12 +4,14 @@ import { Logo } from "../Logo";
 import { Bag, Heart } from "../../Icons";
 import { useUI } from "@components/Context";
 import { Sidebar, CartSidebar } from "@components/Shop";
-
+import { useCart } from "@common/cart/use-cart";
 
 export function MainNavigation() {
 
 	const { openSidebar, isSidebarOpen, closeSidebar } = useUI();
+	// const { data } = useCart();
 
+	// console.log("Data: ", data);
 
 	return (
 		<header className={ classes.header }>

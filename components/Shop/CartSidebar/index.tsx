@@ -15,7 +15,7 @@ export const CartSidebar: FC = () => {
 	const { closeSidebar } = useUI();
 
 	const { data } = useCart();
-	console.log(data);
+	console.log("DATA: ", data);
 
 	
 	return (

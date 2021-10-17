@@ -6,6 +6,7 @@ import { checkoutLineItemsAdd } from "./mutations";
 import { createCheckout } from "./create-checkout";
 import { getCheckoutQuery } from "./queries/get-checkout";
 import { checkoutDetailFragment } from "./checkout-detail-fragment";
+import { checkoutToCart } from "./checkout-to-cart";
 
 
 export
@@ -17,5 +18,6 @@ export
 	checkoutLineItemsAdd,
 	createCheckout,
 	getCheckoutQuery,
-	checkoutDetailFragment
+	checkoutDetailFragment,
+	checkoutToCart
 };

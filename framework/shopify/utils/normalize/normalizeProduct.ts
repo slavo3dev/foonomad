@@ -1,5 +1,5 @@
 import { ImageEdge } from "./../schema/schema.d";
-import { Product as ShopifyProduct, MoneyV2,  ProductOption, ProductVariantConnection,  SelectedOption } from "../schema/schema";
+import { Product as ShopifyProduct, MoneyV2,  ProductOption, ProductVariantConnection,  SelectedOption, Checkout } from "../schema/schema";
 
 import { Product } from "../../../common/types/product";
 
@@ -108,3 +108,7 @@ export function normalizeProduct(productNode: ShopifyProduct): Product
     
 	return product;
 }
+
+export const normalizeCart = (checkout: Checkout): any => {
+	return checkout;
+};
