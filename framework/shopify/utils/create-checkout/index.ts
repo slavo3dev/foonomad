@@ -1,7 +1,7 @@
 
 import { ApiFetcher } from "@common/types/api-types";
 import { checkoutCreateMutation } from "@framework/utils/mutations";
-import { Checkout, CheckoutCreatePayload, Maybe } from "@shopify/schema/schema";
+import { Checkout, CheckoutCreatePayload, Maybe } from "../schema/schema";
 
 export const createCheckout = async (
 	fetch: ApiFetcher<{checkoutCreate: CheckoutCreatePayload}>
