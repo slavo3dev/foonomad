@@ -1,0 +1,38 @@
+import React from "react";
+import Head from "next/head";
+import { useRouter } from "next/router";
+
+
+export const HeadBasePage = (props: any) => {
+	const router = useRouter();
+	const {
+		title = "Portfolio - Prototype.NEXT",
+		metaDescription="My name is Slavo Popovic and I am an experienced software web engineer and freelance developer. The enthusiastic professional developer of web/chatbots/aws cloud who is used to fast-paced environments. Hardworking and effective as both a team leader and in an individual role",
+		canonicalPath,} = props;
+
+	return (
+		<>
+			<Head>
+				<title>{title}</title>
+				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
+				<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+				<meta name="description" key="description" content={metaDescription} />
+				<meta name="title" key="title" content={title} />
+				<meta property="og:title" key="og:title" content={title} />
+				<meta property="og:locale" key="og:locale" content="en_EU" />
+				<meta property="og:url" key="og:url" content={`${process.env.BASE_URL}${router.asPath}`} />
+				<meta property="og:type" key="og:type" content="website" />
+				<meta property="og:description" key="og:description" content={metaDescription} />
+				<meta property="og:image" key="og:image" content={`${process.env.BASE_URL}/images/section-1.png`} />
+				<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet"></link>
+				<link rel="icon" type="image/x-icon" href="/images/favicon.ico"/>
+				<link
+					rel="canonical"
+					href={ `${ process.env.BASE_URL }${ canonicalPath ? canonicalPath : router.asPath }` } />
+				<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/keen-slider@latest/keen-slider.min.css" />
+				<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"></link>
+			</Head>
+		</>
+	);
+};
+

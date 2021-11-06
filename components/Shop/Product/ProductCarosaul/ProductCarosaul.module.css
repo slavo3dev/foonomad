@@ -1,0 +1,12 @@
+.pSliderContainer {
+    height: 320px;
+}
+
+.pSliderRow {
+   @apply flex flex-row;
+
+   & > * {
+       @apply flex-1 px-16 py-4 relative;
+   }
+}
+

@@ -1,6 +1,6 @@
 import { contenfulData } from "../../utils/contentfulData";
 import "semantic-ui-css/semantic.min.css";
-import { AllPosts, CategorySearch } from "../../componetns";
+import { AllPosts, CategorySearch } from "../../components";
 import { useRouter } from "next/router";
 
 
