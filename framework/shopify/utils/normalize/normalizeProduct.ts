@@ -1,6 +1,6 @@
 import { ImageEdge } from "./../schema/schema.d";
-import { Product as ShopifyProduct, MoneyV2,  ProductOption, ProductVariantConnection,  SelectedOption, Checkout } from "../schema/schema";
-
+import { Product as ShopifyProduct, MoneyV2,  ProductOption, ProductVariantConnection,  SelectedOption, Checkout,CheckoutLineItemEdge } from "../schema/schema";
+import { Cart } from "@common/types/cart";
 import { Product } from "../../../common/types/product";
 
 
@@ -109,6 +109,43 @@ export function normalizeProduct(productNode: ShopifyProduct): Product
 	return product;
 }
 
-export const normalizeCart = (checkout: Checkout): any => {
-	return checkout;
+export const normalizeCart = (checkout: Checkout): Cart => {
+	return {
+		id: checkout.id,
+		createdAt: checkout.createdAt,
+		currency: {
+			code: checkout.totalPriceV2.currencyCode
+		},
+		taxesIncluded: checkout.taxesIncluded,
+		lineItemsSubtotalPrice: +checkout.subtotalPriceV2.amount,
+		totalPrice: checkout.totalPriceV2.amount,
+		lineItems: checkout.lineItems.edges.map(normalizeLineItem),
+		discounts: []
+	};
+};
+
+const normalizeLineItem = ({
+	node: { id, title, variant, ...rest}
+}: CheckoutLineItemEdge): any => {
+	return {
+		id,
+		variantId: String(variant?.id),
+		productId: String(variant?.id),
+		name: title,
+		path: variant?.product?.handle ?? "",
+		discounts: [],
+		// TODO: options
+		variant: {
+			id: String(variant?.id),
+			sku: variant?.sku ?? "",
+			name: variant?.title,
+			// TODO: image
+			requiresShipping: variant?.requiresShipping ?? false,
+			// actual price
+			price: variant?.priceV2.amount,
+			// base price
+			listPrice: variant?.compareAtPriceV2?.amount,
+		},
+		...rest
+	};
 };
