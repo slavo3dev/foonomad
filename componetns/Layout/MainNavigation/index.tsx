@@ -24,16 +24,6 @@ export function MainNavigation() {
 					</li>
 				</ul>
 			</nav>
-			<nav>
-				<ul>
-					<li>
-						<Link href="/"><Bag style={{color: "white"}} /></Link>
-					</li>
-					<li>
-						<Link href="/"><Heart style={{color: "white"}}/></Link>
-					</li>
-				</ul>
-			</nav>
 		</header>
 	);
 }

@@ -1,11 +1,14 @@
+/* eslint-disable no-undef */
 
 
-export const purge = ["./pages/**/*.{js,ts,jsx,tsx}","./components/**/*.{js,ts,jsx,tsx}"];
-export const darkMode = false;
-export const theme = {
-	extend: {},
+module.exports = {
+	purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
+	darkMode: false, // or 'media' or 'class'
+	theme: {
+		extend: {},
+	},
+	variants: {
+		extend: {},
+	},
+	plugins: [],
 };
-export const variants = {
-	extend: {},
-};
-export const plugins = [];
