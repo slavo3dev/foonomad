@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { HeadBasePage } from "../../componetns";
+import { HeadBasePage } from "../../components";
 import { Container, Header } from "semantic-ui-react";
 
 declare global {

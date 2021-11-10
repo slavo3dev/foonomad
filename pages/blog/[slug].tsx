@@ -2,7 +2,7 @@ import { contenfulData } from "../../utils/contentfulData";
 import "semantic-ui-css/semantic.min.css";
 import {useRouter} from "next/router";
 import {Container} from "semantic-ui-react";
-import { PostContent } from "../../componetns";
+import { PostContent } from "../../components";
 
 export async function getStaticProps ()
 {
