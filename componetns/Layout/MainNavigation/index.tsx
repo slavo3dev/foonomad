@@ -1,7 +1,7 @@
 import Link from "next/link";
 import classes from "./navigation.module.css";
 import { Logo } from "../Logo";
-import { Bag, Heart } from "../../Icons";
+
 
 export function MainNavigation() {
 	return (
