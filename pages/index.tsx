@@ -1,6 +1,6 @@
 import "semantic-ui-css/semantic.min.css";
 import { contenfulData } from "../utils/contentfulData";
-import { FeaturedPosts, Hero } from "../components";
+import { FeaturedPosts, Hero, Marketplace } from "@components";
 
 
 
@@ -22,7 +22,8 @@ export default function Home (props: any)
 	return (
 		<>
 			<Hero />
-			<FeaturedPosts posts={props} />
+			<FeaturedPosts posts={ props } />
+			<Marketplace />
 		</>
 	);
 }
