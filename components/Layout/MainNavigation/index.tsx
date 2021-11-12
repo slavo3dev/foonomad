@@ -1,7 +1,6 @@
 import Link from "next/link";
 import classes from "./navigation.module.css";
 import { Logo } from "../Logo";
-import { Plus } from "@components/Icons";
 
 
 export function MainNavigation() {
