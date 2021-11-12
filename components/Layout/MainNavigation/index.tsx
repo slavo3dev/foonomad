@@ -14,7 +14,7 @@ export function MainNavigation() {
 			<nav>
 				<ul>
 					<li>
-						<Link href="/about">Company</Link>
+						<Link href="/about">About</Link>
 					</li>
 					<li>
 						<Link href="/blog">Blog</Link>
