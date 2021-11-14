@@ -3,7 +3,7 @@ export const HeroMarketplace = () =>
 {
 	return (
 		<section className="lg:2/6 text-left my-28">
-			<div className="text-6xl font-semibold text-gray-900 leading-none">Grow your online Buisness</div>
+			<div className="text-6xl font-semibold text-gray-900 leading-none">Grow your online Buisness - Coming Soon</div>
 			<div className="mt-6 text-xl font-light text-true-gray-500 antialiased">Build your Prototype/Demo the easy & fast way! Get unlimited access to all of our products.</div>
 			<div className="mt-5 sm:mt-8 flex lg:justify-start">
 				<div className="rounded-md shadow">
