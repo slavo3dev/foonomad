@@ -1,9 +1,6 @@
-import { FC } from "react";
-
-interface Props
-{
-    children: FC
-}
+type Props = {
+  children?: React.ReactNode;
+};
 
 export const MarketplaceLayout: React.FC<Props> = ({ children }) =>
 {
