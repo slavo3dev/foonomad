@@ -1,5 +1,5 @@
 
-export const HeroMarketplace = () =>
+export const HeroMarketplace: React.FC = () =>
 {
 	return (
 		<section className="lg:2/6 text-left my-28">

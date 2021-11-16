@@ -1,4 +1,4 @@
-export const ProductList = () =>
+export const ProductList: React.FC = () =>
 {
 	return (
 		<section className="grid grid-cols-2 gap-4 mb-5">

@@ -1,7 +1,7 @@
 import ReactDOM from "react-dom";
 import classes from "./notification.module.css";
 
-export function ContactNotify(props: any) {
+export const ContactNotify: React.FC = (props: any) => {
 	const { notification } = props;
 	const { title, message, status } = notification;
 
@@ -29,4 +29,4 @@ export function ContactNotify(props: any) {
 		</div>,
 		portalDiv,
 	) : null;
-}
+};

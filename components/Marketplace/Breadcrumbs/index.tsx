@@ -1,6 +1,6 @@
 
 
-export const BreadCrumbs = () =>
+export const BreadCrumbs: React.FC = () =>
 {
 	return (
 		<nav aria-label="breadcrumb" className="mb-4">

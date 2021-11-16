@@ -1,4 +1,4 @@
-export const OrderCard = () =>
+export const OrderCard: React.FC = () =>
 {
 	return (
 		<div className="bg-white shadow overflow-hidden sm:rounded-lg mb-3">

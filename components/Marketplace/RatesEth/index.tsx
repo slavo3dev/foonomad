@@ -1,4 +1,4 @@
-export const RatesEth = () => {
+export const RatesEth: React.FC = () => {
 
 	return (
 		<div className="grid grid-cols-4 mb-5">
