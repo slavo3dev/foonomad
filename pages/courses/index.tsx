@@ -1,7 +1,11 @@
-export default function Course() {
+import { CoursesComponents } from "@components/CoursesComponents ";
+
+const Course: React.FC =  () =>
+{
 
 	return (
-		<div className="relative max-w-7xl mx-auto px-4">
-		</div>
+		<CoursesComponents />
 	);
-}
+};
+
+export default Course;
