@@ -19,15 +19,15 @@ export function MainNavigation() {
 					<li>
 						<Link href="/blog">Blog</Link>
 					</li>
-					<li>
+					{/* <li>
 						<Link href="/ethshop">Marketplace</Link>
-					</li>
+					</li> */}
 					<li>
 						<Link href="/contact">Contact</Link>
 					</li>
-					<li>
+					{/* <li>
 						<Link href="/#">Log In</Link>
-					</li>
+					</li> */}
 				</ul>
 			</nav>
 		</header>
