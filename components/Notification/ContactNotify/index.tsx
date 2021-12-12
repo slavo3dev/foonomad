@@ -1,7 +1,17 @@
 import ReactDOM from "react-dom";
 import classes from "./notification.module.css";
 
-export const ContactNotify: React.FC = (props: any) => {
+
+interface Props
+{
+	notification: {
+		status: string;
+		title: string;
+		message: string;
+	}
+}
+
+export const ContactNotify  = (props: Props) => {
 	const { notification } = props;
 	const { title, message, status } = notification;
 

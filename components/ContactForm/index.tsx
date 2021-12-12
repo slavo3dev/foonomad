@@ -5,6 +5,14 @@ import { Formik } from "formik";
 import { Form, Button, Segment } from "semantic-ui-react";
 import { HeadBasePage } from "../HeadBasePage";
 
+
+interface NotificationData {
+   status: string,
+   title: string,
+   message: string
+}
+
+let notificationData: NotificationData;
 export function ContactForm ()
 {
 	const [reqStatus, setReqStatus] = useState(""); // "Pending", "Success", "error"
@@ -28,14 +36,12 @@ export function ContactForm ()
 		try {
 			await sendContactData(values);
 			setReqStatus("success");
-		} catch (error) {
+		} catch (error: any) {
 			setReqStatus("error");
 			setReqErrorMessage(error.message);
 			console.error("Something Went Wrong: ", error.message);
 		}
 	}
-
-	let notificationData;
 
 	if (reqStatus === "pending") {
 		notificationData = {
