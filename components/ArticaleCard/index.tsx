@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Card, Grid, Transition } from "semantic-ui-react";
 import Link from "next/link";
 
@@ -10,7 +10,7 @@ interface Props  {
 			url: string
 		}
 	},
-	extraInfo: any,
+	extraInfo: string,
 	category: string;
 	postUrl: string
 }

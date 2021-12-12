@@ -23,7 +23,6 @@ export default function Home (props: any)
 		<>
 			<Hero />
 			<FeaturedPosts posts={ props } />
-			<Marketplace />
 		</>
 	);
 }
