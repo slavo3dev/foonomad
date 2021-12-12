@@ -31,7 +31,6 @@ export const ArticaleCard = ( { titleHeader, description, urlImage, extraInfo, c
 			setDuration( 1000 );
 			setVisible( false );
 			setIsEnabledAnimation( true );
-			console.log("Inside Animation");
 		} else
 		{
 			setAnimation("");
@@ -39,11 +38,6 @@ export const ArticaleCard = ( { titleHeader, description, urlImage, extraInfo, c
 			setVisible( true );
 			setIsEnabledAnimation(false);
 		}
-
-		console.log("-------------------------- Start ---------------------");
-		console.log("Hello: ", titleHeader );
-		console.log( "isEnabledAnimation: ", isEnabledAnimation );
-		console.log("-------------------------- end ---------------------");
 	}
 
 	

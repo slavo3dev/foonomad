@@ -19,15 +19,9 @@ export function MainNavigation() {
 					<li>
 						<Link href="/blog">Blog</Link>
 					</li>
-					{/* <li>
-						<Link href="/ethshop">Marketplace</Link>
-					</li> */}
 					<li>
 						<Link href="/contact">Contact</Link>
 					</li>
-					{/* <li>
-						<Link href="/#">Log In</Link>
-					</li> */}
 				</ul>
 			</nav>
 		</header>
