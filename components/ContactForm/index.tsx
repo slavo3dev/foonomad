@@ -122,9 +122,9 @@ export function ContactForm ()
 					)}
 				</Formik>
 			</Segment>
-			{notificationData && (
+			{/* {notificationData && (
 				<ContactNotify notification={notificationData} />
-			)}
+			)} */}
 		</>
 	);
 }
