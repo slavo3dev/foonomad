@@ -10,7 +10,7 @@ interface Props  {
 			url: string
 		}
 	},
-	extraInfo: string,
+	extraInfo: any,
 	category: string;
 	postUrl: string
 }
