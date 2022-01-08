@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 export const HeadBasePage = (props: any) => {
 	const router = useRouter();
 	const {
-		title = "Portfolio - Prototype.NEXT",
+		title = "Portfolio - foo(Nomad)",
 		metaDescription="My name is Slavo Popovic and I am an experienced software web engineer and freelance developer. The enthusiastic professional developer of web/chatbots/aws cloud who is used to fast-paced environments. Hardworking and effective as both a team leader and in an individual role",
 		canonicalPath,} = props;
 

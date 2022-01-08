@@ -23,7 +23,7 @@ It's important to understand that the View component is compiling to real native
  const App = props => {
      return(
          <View>
-            <Text>Prototype.NEXT</Text>
+            <Text>foo(Nomad)</Text>
          </View>
          )
 }

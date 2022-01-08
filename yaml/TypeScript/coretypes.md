@@ -25,7 +25,7 @@
 ```js
   const firstName: string = "Slavo";
   const lastName: string = "Slavo";
-  const username: string = 'Prototype.NEXT';
+  const username: string = 'foo(NOMAD)';
   const city: string = `Miami`;
   const greeting: string = `Hello ${firstName} ${lastName}`
   }

@@ -34,7 +34,7 @@
   type Username = string
   type PersonLogFunction = (name: string) =>  string 
   
-  const username: string = "Slavo3 Prototype.NEXT"
+  const username: string = "Slavo3 foo(NOMAD)"
 
   const logUser: PersonLogFunction = (name) => {
     return name;

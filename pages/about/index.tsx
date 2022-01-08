@@ -29,7 +29,7 @@ const About = () => {
 	return (
 		<>
 			<HeadBasePage
-				title="About Me - Prototype.NEXT"
+				title="About Me - foo(Nomad)"
 				className="about-page" />
 			<Container text style={ { justifyContent: "center", width: "50%", margin: "auto"}}>
 				<Header>

@@ -15,7 +15,7 @@ export function Hero() {
 					height={300}
 				/>
 			</div>
-			<h1>Prototype.NEXT</h1>
+			<h1>foo(Nomad)</h1>
 			<p className={classes.quote}>The future depends on what<br /> you do today.</p>
 			<Link href="/blog"><a><Button style={ { margin: "10px" } } size='big' inverted >Articles</Button></a></Link>
 		</section>
