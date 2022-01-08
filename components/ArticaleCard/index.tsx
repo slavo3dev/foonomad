@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Card, Grid, Transition } from "semantic-ui-react";
+import React from "react";
+import { Card, Grid } from "semantic-ui-react";
 import Link from "next/link";
 
 interface Props  { 
@@ -18,47 +18,19 @@ interface Props  {
 
 export const ArticaleCard = ( { titleHeader, description, urlImage, extraInfo, category, postUrl}: Props ) => {
 	
-	const [ isEnabledAnimation, setIsEnabledAnimation] = useState(false);
-	const [ duration, setDuration ] = useState( 0 );
-	const [ animation, setAnimation ] = useState("");
-	const [ visible, setVisible ] = useState( true );
-	
-
-	function animationHandler(){
-		
-		if (!isEnabledAnimation){
-			setAnimation( "bounce" );
-			setDuration( 1000 );
-			setVisible( false );
-			setIsEnabledAnimation( true );
-		} else
-		{
-			setAnimation("");
-			setDuration( 0 );
-			setVisible( true );
-			setIsEnabledAnimation(false);
-		}
-	}
-
-	
-	return (
+	return ( 
 		<Link href={ postUrl } >
-			<a onMouseEnter={ () => animationHandler() }>
+			<a>
 				<Grid.Column width={ 4 } >
-					<Transition
-						animation={animation}
-						duration={duration}
-						visible={visible}
-					>
-						<Card
-							color='blue'
-							image={ urlImage.file.url }
-							header={ titleHeader }
-							meta={ category }
-							description={ description }
-							extra={extraInfo}
-						/>
-					</Transition>
+					<Card
+						color='blue'
+						image={ urlImage.file.url }
+						header={ titleHeader }
+						meta={ category }
+						description={ description }
+						extra={ extraInfo }
+						className="articaleCard"
+					/>
 				</Grid.Column>
 			</a>
 		</Link>
