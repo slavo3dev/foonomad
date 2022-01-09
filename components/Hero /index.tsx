@@ -9,7 +9,7 @@ export function Hero() {
 			<div className={classes.image}>
 				<Image
 					className="animate__animated animate__fadeIn profile-image-hero"
-					src="/assets/images/profile/profile.jpeg"
+					src="/assets/images/profile/profile.png"
 					alt="Profile Image, Software Developer"
 					width={300}
 					height={300}
