@@ -4,7 +4,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-run the development server:
+Run the development server:
 
 ```bash
 yarn dev
